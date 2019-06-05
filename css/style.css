@@ -13,6 +13,7 @@ select {
 
 .drp-popup {
     font-family: "AvenirLTStd-Heavy", "Avenir LT Std 85 Heavy", "Open Sans", Helvetica, Arial, sans-serif;
+    display: none;
 }
 
 .drp-popup {
@@ -25,7 +26,7 @@ select {
     font-size: 12px;
     color: #444444;
     background-color: white;
-    margin: 15px 0;
+    margin: 28px 0;
     padding: 18px 18px 38px;
     text-transform: uppercase;
     border: 1px solid #d6d6d6;
@@ -123,7 +124,7 @@ select {
 }
 
 .drp-popup .drp-timeline .drp-timeline-presets li.drp-selected .drp-button, .drp-popup .drp-timeline .drp-timeline-presets li:hover .drp-button {
-    background-color: #2a91ca;
+    background-color: #01c0c8;
     width: 16px;
     height: 16px;
     left: 35px;
@@ -224,9 +225,9 @@ select {
 }
 
 .drp-popup .drp-calendar .drp-days li.drp-day-in-range {
-    color: #2a91ca;
-    background-color: #ddf3fe;
-    border-color: #ddf3fe;
+    color: #01c0c8;
+    background-color: #e6f9fa;
+    border-color: #e6f9fa;
 }
 
 .drp-popup .drp-calendar .drp-days li.drp-day-last-in-range {
@@ -235,7 +236,7 @@ select {
 
 .drp-popup .drp-calendar .drp-days li.drp-day-selected, .drp-popup .drp-calendar .drp-days li:hover {
     color: #efefef;
-    background-color: #2a91ca;
+    background-color: #01c0c8;
 }
 
 .drp-popup .drp-calendar .drp-days li.drp-day-disabled {
@@ -258,7 +259,7 @@ select {
 }
 
 .drp-popup .drp-calendar:first-child .drp-day-selected {
-    border-color: #ddf3fe;
+    border-color: #e6f9fa;
 }
 
 .drp-popup .drp-calendar-date {
@@ -267,7 +268,7 @@ select {
     height: 34px;
     width: inherit;
     text-align: center;
-    color: #2a91ca;
+    color: #01c0c8;
     font-size: 16px;
 }
 
@@ -303,7 +304,7 @@ select {
     content: "To";
     position: absolute;
     top: 80px;
-    color: #2a91ca;
+    color: #01c0c8;
     background-color: white;
     height: 38px;
     width: 69px;
@@ -326,13 +327,13 @@ select {
 }
 
 .drp-popup .drp-tip:before {
-    left: 0;
+    left: 80px;
     border-width: 0 16px 16px;
     border-color: #d6d6d6 transparent;
 }
 
 .drp-popup .drp-tip:after {
-    left: 2px;
+    left: 82px;
     border-width: 0px 14px 14px;
     border-color: white transparent;
 }

@@ -748,7 +748,7 @@
             <li>离园宝贝</li>
           </ol>
           <ul class="p20">
-            <li>
+            <li class="tabPanel_Item">
               <div>
                 <form class="" action="index.html（url地址）" method="post" name="表单名称">
                   <div class="ju_Start">
@@ -767,8 +767,9 @@
                   </div>
                   <br/>
                   <div class="ju_Start">
-                    	<div style="width:720px;margin:40px auto 0 auto;position:relative;">
-                        <select class='custom-date' name='select'>
+                      <div style="width:580px;position:relative;">
+                        <label class="el_Label">入园时间</label>
+                        <select class='custom-date' name='select' style="width: 180px;height: 40px;">
                           <option selected='selected' value='90'>开始日期 &nbsp; 至 &nbsp; 结束日期</option>
                         </select>
                     	</div>
@@ -820,7 +821,7 @@
                 </tbody>
               </table>
             </li>
-            <li>2</li>
+            <li class="tabPanel_Item">
           </ul>
         </div>
       </div>
@@ -828,12 +829,11 @@
     </div>
   </div>
 </body>
-<!-- <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script> -->
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 <!-- 下载的 jquery select日历选择器 -->
-<script type="text/javascript" src='../js/jquery.js'></script>
 <script src="../js/calendar.js"></script>
 <!-- 公共JS -->
-<!-- <script src="../js/common.js"></script> -->
+<script src="../js/common.js"></script>
 <script type="text/javascript">
 
   $('#tab ul li').eq(0).show(); // 第一个面板 显示
