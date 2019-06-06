@@ -28,3 +28,12 @@ $('.user').on("click", function (e) {
     $('.userList').hide();
   });
 });
+
+//  <!-- 选项卡  内容区域的 -- >
+$('#tab ul li.tabPanel_Item').eq(0).show(); // 第一个面板 显示
+$('#tab ol li').on('click', function () {
+  // 点击时、添加cur样式
+  $(this).addClass('cur').siblings().removeClass('cur');
+  // 点击时、显示当前对应面板
+  $('#tab ul li.tabPanel_Item').eq($(this).index()).show().siblings().hide();
+})

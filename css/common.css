@@ -155,16 +155,52 @@ div,ul,li {background: rgba(0, 0, 0, 0.1);}
 /* Internet Explorer 10-11 */
 .el_Input:-ms-input-placeholder {color: #01c0c8;font-size: 12px;text-align: left;}
 .el_Label {font-size: 12px;color: #515151;margin-right: 10px;padding: 10px 0;}
-.el_Select {width: 180px;height: 40px;background: #fff;border-color: #dcdfe6;}
+.el_Select {width: 200px;height: 40px;background: #fff;border-color: #dcdfe6;}
 .el_button {color: #fff;background-color: #01c0c8;border-color: #01c0c8;border-radius: 4px;padding: 0 20px;font-weight: 600;margin-right: 20px;cursor: pointer;height: 36px;}
 .el_button:hover {background: #34cdd3;border-color: #34cdd3;}
 .el_button_white {color: #515151;border: 1px solid #dcdfe6;border-radius: 4px;padding: 0 20px;font-weight: 600;cursor: pointer;}
 .el_button_white:hover {color: #01c0c8;border-color: #b3ecef;background-color: #e6f9fa;}
+.el_button.ban {
+      background-color: #80e0e4;
+      border-color: #80e0e4;
+      cursor: not-allowed;
+}
 .el_Paging {
   display: flex;
   justify-content: flex-start;
+      align-items: center;
+      font-size: 12px;
+      color: #515151;
 }
 
+.el_Paging_Item {
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  margin: 0 5px;
+  background-color: #f4f4f5;
+  color: #606266;
+  min-width: 30px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.el_Paging_Item.cur {
+  background-color: #01c0c8;
+  color: #fff;
+}
+.el_Paging_Input {
+  width: 46px;
+  height: 28px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 0 4px;
+  box-sizing: border-box;
+  padding-left: 10px;
+  margin: 0 4px;
+}
+.el_Paging_Num {
+  margin-right: 4px;
+}
 .footer {height: 60px;line-height: 60px;background: #fff;text-align: center;font-size: 14px;color: #2c2c2c;}
 
 

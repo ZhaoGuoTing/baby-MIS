@@ -792,7 +792,7 @@
                   <div class="ju_Start">
                     <button type="button" class="el_button">新增宝贝</button>
                     <button type="button" class="el_button">批量调班</button>
-                    <button type="button" class="el_button">批量离园</button>
+                    <button type="button" class="el_button ban" disabled="disabled">批量离园</button>
                     <button type="button" class="el_button">导入<i class="fa fa-angle-down fa-fw"aria-hidden="true"></i></button>
                   </div>
                   <br />
@@ -880,20 +880,20 @@
               </table>
               <br />
               <div class="ju_Between">
-                <button type="button" class="el_button">导出</button>
+                <button type="button" class="el_button"><i class="fa fa-download" aria-hidden="true" style="margin-right: 4px;"></i>导出</button>
                 <div class="el_Paging">
-                  <span>共 57 条</span>
+                  <span class="el_Paging_Num">共 57 条</span>
                   <ul class="ju_Start">
-                    <li><i class="fa fa-angle-left" aria-hidden="true"></i></li>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                    <li>6</li>
-                    <li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+                    <li class="el_Paging_Item"><i class="fa fa-angle-left" aria-hidden="true"></i></li>
+                    <li class="el_Paging_Item">1</li>
+                    <li class="el_Paging_Item cur">2</li>
+                    <li class="el_Paging_Item">3</li>
+                    <li class="el_Paging_Item">4</li>
+                    <li class="el_Paging_Item">5</li>
+                    <li class="el_Paging_Item">6</li>
+                    <li class="el_Paging_Item"><i class="fa fa-angle-right" aria-hidden="true"></i></li>
                   </ul>
-                  <div>前往<input type="number" min="1" max="11">页</div>
+                  <div>前往<input class="el_Paging_Input" type="number" min="1" max="11">页</div>
                   
                 </div>
               </div>
@@ -911,14 +911,5 @@
 <script src="../js/calendar.js"></script>
 <!-- 公共JS -->
 <script src="../js/common.js"></script>
-<script type="text/javascript">
 
-  $('#tab ul li.tabPanel_Item').eq(0).show(); // 第一个面板 显示
-  $('#tab ol li').on('click', function () {
-    // 点击时、添加cur样式
-    $(this).addClass('cur').siblings().removeClass('cur');
-    // 点击时、显示当前对应面板
-    $('#tab ul li.tabPanel_Item').eq($(this).index()).show().siblings().hide();
-  })
-</script>
 </html>
