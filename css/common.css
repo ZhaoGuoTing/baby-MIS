@@ -78,38 +78,19 @@ body {
   sans-serif;
 }
 
-div,
-ul,
-li {
-  background: rgba(0, 0, 0, 0.1);
-}
+div,ul,li {background: rgba(0, 0, 0, 0.1);}
 /* 
   flex布局 
 */
-.ju_Center {
-  display: flex;
-  justify-content: center;
-}
-.ju_Between {
-  display: flex;
-  justify-content: space-between;
-}
-.al_Center {
-  display: flex;
-  align-items: center;
-}
-.ju_Start {
-  display: flex;
-  justify-content: flex-start;
-}
+.ju_Center {display: flex;justify-content: center;}
+.ju_Between {display: flex;justify-content: space-between;}
+.ju_Around {display: flex;justify-content: space-around;}
+.al_Center {display: flex;align-items: center;}
+.ju_Start {display: flex;justify-content: flex-start;}
 
 /* 间距 */
-.p20 {
-  padding: 20px;
-}
-.mb20 {
-  margin-bottom: 20px;
-}
+.p20 {padding: 20px;}
+.mb20 {margin-bottom: 20px;}
 /* 
   下面是掌心宝贝-幼儿园管理平台的公共样式
 */
@@ -161,8 +142,9 @@ li {
 .el_table tbody tr:hover {background: #e5f9fa;}
 .el_table th,.el_table td {border: 1px solid #ebeef5;padding: 0 8px;font-size: 14px;color: #515151;}
 .el_table th {font-weight: 600;color: #2c2c2c;}
+.el_table a.operation {font-size: 12px;font-weight: 600;color: #01c0c8;}
 .el_form_Item {margin-right: 20px;}
-.el_Input {width: 180px;height: 36px;line-height: 36px;background-color: #fff;background-image: none;border-radius: 4px;border: 1px solid #dcdfe6;box-sizing: border-box;color: #606266;display: inline-block;font-size: 12px;height: 40px;line-height: 40px;outline: none;padding: 0 10px;transition: border-color .2s cubic-bezier(.645, .045, .355, 1);}
+.el_Input {width: 180px;height: 36px;line-height: 36px;background-color: #fff;background-image: none;border-radius: 4px;border: 1px solid #dcdfe6;box-sizing: border-box;color: #606266;display: inline-block;font-size: 12px;outline: none;padding: 0 10px;transition: border-color .2s cubic-bezier(.645, .045, .355, 1);}
 .el_Input:focus {outline: none;border-style: solid;border-color: #01c0c8;box-shadow: 0 0 4px #01c0c8;}
 /* WebKit, Blink, Edge */
 .el_Input::-webkit-input-placeholder {color: #01c0c8;font-size: 12px;text-align: left;}
@@ -173,6 +155,16 @@ li {
 /* Internet Explorer 10-11 */
 .el_Input:-ms-input-placeholder {color: #01c0c8;font-size: 12px;text-align: left;}
 .el_Label {font-size: 12px;color: #515151;margin-right: 10px;padding: 10px 0;}
+.el_Select {width: 180px;height: 40px;background: #fff;border-color: #dcdfe6;}
+.el_button {color: #fff;background-color: #01c0c8;border-color: #01c0c8;border-radius: 4px;padding: 0 20px;font-weight: 600;margin-right: 20px;cursor: pointer;height: 36px;}
+.el_button:hover {background: #34cdd3;border-color: #34cdd3;}
+.el_button_white {color: #515151;border: 1px solid #dcdfe6;border-radius: 4px;padding: 0 20px;font-weight: 600;cursor: pointer;}
+.el_button_white:hover {color: #01c0c8;border-color: #b3ecef;background-color: #e6f9fa;}
+.el_Paging {
+  display: flex;
+  justify-content: flex-start;
+}
+
 .footer {height: 60px;line-height: 60px;background: #fff;text-align: center;font-size: 14px;color: #2c2c2c;}
 
 
@@ -288,22 +280,10 @@ li {
 /* 
   选项卡（切换表单）
 */
-#tab ol {
-      display: flex;
-      justify-content: flex-start;
-}
-#tab ol li {
-      font-weight: 600;
-      margin-right: 30px;
-}
-#tab ol li.cur {
-      color: #01c0c8;
-      border-bottom: 2px solid #01c0c8;
-}
-
-#tab ul li.tabPanel_Item {
-  display: none;
-}
+#tab ol {display: flex;justify-content: flex-start;}
+#tab ol li {font-weight: 600;margin-right: 30px;}
+#tab ol li.cur {color: #01c0c8;border-bottom: 2px solid #01c0c8;}
+#tab ul li.tabPanel_Item {display: none;}
 
 /* 
   媒体查询 (max-width: 1440px) media="小于等于1440px"

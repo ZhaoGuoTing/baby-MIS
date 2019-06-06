@@ -739,7 +739,11 @@
       <div class="path">
         <span>首页</span>
         <em>/</em>
-        <span>仪表盘</span>
+        <span>人员管理</span>
+        <em>/</em>
+        <span>宝贝管理</span>
+        <em>/</em>
+        <span>在园宝贝</span>
       </div>
       <div class="panel_Cont">
         <div class="el_box" id="tab" style="width: 100%;">
@@ -760,31 +764,45 @@
                       <label class="el_Label" for="ParentsName">家长姓名</label>
                       <input type="text" class="el_Input" placeholder="请输入" id="ParentsName"/>
                     </div>
-                    <div class="el_form_Item">
-                      <label class="el_Label" for="phoneNumber">联系电话</label>
-                      <input type="tel" class="el_Input" placeholder="请输入" id="phoneNumber"/>
+                    <div style="width:580px;position:relative;">
+                      <label class="el_Label">入园时间</label>
+                      <select class='custom-date el_Select' name='select'>
+                        <option selected='selected' value='90'>开始日期 &nbsp; 至 &nbsp; 结束日期</option>
+                      </select>
                     </div>
                   </div>
                   <br/>
                   <div class="ju_Start">
-                      <div style="width:580px;position:relative;">
-                        <label class="el_Label">入园时间</label>
-                        <select class='custom-date' name='select' style="width: 180px;height: 40px;">
-                          <option selected='selected' value='90'>开始日期 &nbsp; 至 &nbsp; 结束日期</option>
-                        </select>
-                    	</div>
-                    <div class="el_form_Item">
-                      <label for="UserName">考勤卡号</label>
-                      <input type="text" placeholder="请输入" id="UserName" />
-                    </div>
+                      <div class="el_form_Item">
+                        <label class="el_Label" for="phoneNumber">联系电话</label>
+                        <input type="tel" class="el_Input" placeholder="请输入" id="phoneNumber" />
+                      </div>
+                      <div class="el_form_Item">
+                        <label class="el_Label" for="CardNumber">考勤卡号</label>
+                        <input type="tel" class="el_Input" placeholder="请输入" id="CardNumber" />
+                      </div>
+                      <div class="el_form_Item">
+                        <label class="el_Label" for="Class">所在班级</label>
+                        <input type="tel" class="el_Input" placeholder="请选择" id="Class" />
+                      </div>
+                      <button type="button" class="el_button"><i class="fa fa-search fa-fw" aria-hidden="true"style="margin-right: 4px;"></i>查询</button>
+                      <button type="button" class="el_button_white">重置</button>
                   </div>
+                  <br/>
+                  <div class="ju_Start">
+                    <button type="button" class="el_button">新增宝贝</button>
+                    <button type="button" class="el_button">批量调班</button>
+                    <button type="button" class="el_button">批量离园</button>
+                    <button type="button" class="el_button">导入<i class="fa fa-angle-down fa-fw"aria-hidden="true"></i></button>
+                  </div>
+                  <br />
                 </form>
               </div>
               <table class="el_table" align="center" border="1" cellspacing="0" cellpadding="0">
                 <caption></caption>
                 <thead>
                   <tr>
-                    <th>表单</th>
+                    <th><input type="checkbox"></th>
                     <th>编号</th>
                     <th>宝贝姓名</th>
                     <th>性别</th>
@@ -799,7 +817,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>表单</td>
+                    <td><input type="checkbox"></td>
                     <td>1</td>
                     <td>李刚</td>
                     <td>未知</td>
@@ -810,18 +828,77 @@
                     <td>1999-09-09</td>
                     <td>09876-098765</td>
                     <td>
-                      <div>
-                        <button>编辑</button>
-                        <button>编辑</button>
-                        <button>编辑</button>
-                        <button>编辑</button>
+                      <div class="ju_Around">
+                        <a href="javascript:void(0);" class="operation">编辑</a>
+                        <a href="javascript:void(0);" class="operation">家长管理</a>
+                        <a href="javascript:void(0);" class="operation">绑定考勤卡</a>
+                        <a href="javascript:void(0);" class="operation">离园</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td>1</td>
+                    <td>李刚</td>
+                    <td>未知</td>
+                    <td>1999-09-09</td>
+                    <td>菠萝一班</td>
+                    <td>李刚家长</td>
+                    <td>13439556016</td>
+                    <td>1999-09-09</td>
+                    <td>09876-098765</td>
+                    <td>
+                      <div class="ju_Around">
+                        <a href="javascript:void(0);" class="operation">编辑</a>
+                        <a href="javascript:void(0);" class="operation">家长管理</a>
+                        <a href="javascript:void(0);" class="operation">绑定考勤卡</a>
+                        <a href="javascript:void(0);" class="operation">离园</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td>1</td>
+                    <td>李刚</td>
+                    <td>未知</td>
+                    <td>1999-09-09</td>
+                    <td>菠萝一班</td>
+                    <td>李刚家长</td>
+                    <td>13439556016</td>
+                    <td>1999-09-09</td>
+                    <td>09876-098765</td>
+                    <td>
+                      <div class="ju_Around">
+                        <a href="javascript:void(0);" class="operation">编辑</a>
+                        <a href="javascript:void(0);" class="operation">家长管理</a>
+                        <a href="javascript:void(0);" class="operation">绑定考勤卡</a>
+                        <a href="javascript:void(0);" class="operation">离园</a>
                       </div>
                     </td>
                   </tr>
                 </tbody>
               </table>
+              <br />
+              <div class="ju_Between">
+                <button type="button" class="el_button">导出</button>
+                <div class="el_Paging">
+                  <span>共 57 条</span>
+                  <ul class="ju_Start">
+                    <li><i class="fa fa-angle-left" aria-hidden="true"></i></li>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+                  </ul>
+                  <div>前往<input type="number" min="1" max="11">页</div>
+                  
+                </div>
+              </div>
             </li>
-            <li class="tabPanel_Item">
+            <li class="tabPanel_Item">2</li>
           </ul>
         </div>
       </div>
@@ -836,12 +913,12 @@
 <script src="../js/common.js"></script>
 <script type="text/javascript">
 
-  $('#tab ul li').eq(0).show(); // 第一个面板 显示
+  $('#tab ul li.tabPanel_Item').eq(0).show(); // 第一个面板 显示
   $('#tab ol li').on('click', function () {
     // 点击时、添加cur样式
     $(this).addClass('cur').siblings().removeClass('cur');
     // 点击时、显示当前对应面板
-    $('#tab ul li').eq($(this).index()).show().siblings().hide();
+    $('#tab ul li.tabPanel_Item').eq($(this).index()).show().siblings().hide();
   })
 </script>
 </html>
