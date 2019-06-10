@@ -790,7 +790,7 @@
                   </div>
                   <br/>
                   <div class="ju_Start">
-                    <button type="button" class="el_button">新增宝贝</button>
+                    <button type="button" class="el_button" id="Modal_AddPersonnel">新增宝贝</button>
                     <button type="button" class="el_button">批量调班</button>
                     <button type="button" class="el_button ban" disabled="disabled">批量离园</button>
                     <button type="button" class="el_button">导入<i class="fa fa-angle-down fa-fw"aria-hidden="true"></i></button>
@@ -905,11 +905,80 @@
       <div class="footer">Copyright © 2019 深圳市云领天下科技有限公司</div>
     </div>
   </div>
+  <!-- 6月10号 模态框 添加人员的弹窗 Start -->
+  <!-- 模态框 添加人员的弹窗 -->
+  <!-- 模态框 添加人员的弹窗 -->
+  <div class="Modal_Mask">
+    <div class="Modal_AddWrap">
+      <div class="ju_Between">
+        <div class="el_header">新增宝贝信息</div>
+        <i class="fa fa-window-close p20 Modal_CloseBtn" aria-hidden="true"></i>
+      </div>
+      <div class="p20">
+        <div class="el_form_Item">
+          <label class="el_Label el_TextRight" for="UserName" style="width: 100px;">宝贝姓名</label>
+          <input type="text" class="el_Input" placeholder="请输入" id="UserName" />
+        </div>
+        <br>
+        <div class="el_form_Item">
+          <label class="el_Label el_TextRight" for="UserName" style="width: 100px;">性别</label>
+          <div class="el_Radio">
+            <input type="radio" name="sex"> 男
+            <input type="radio" name="sex"> 女
+          </div>
+        </div>
+        <br>
+        <div class="el_form_Item">
+          <label class="el_Label el_TextRight" for="UserName" style="width: 100px;">出生日期</label>
+          <input type="date" class="el_Input" placeholder="请输入" id="UserName" />
+        </div>
+        <br>
+        <div class="el_form_Item">
+          <label class="el_Label el_TextRight" for="UserName" style="width: 100px;">入园日期</label>
+          <input type="date" class="el_Input" placeholder="请输入" id="UserName" />
+        </div>
+        <br>
+        <div class="el_form_Item">
+          <label class="el_Label el_TextRight" for="UserName" style="width: 100px;">考勤卡号</label>
+          <input type="text" class="el_Input" placeholder="请输入" id="UserName" />
+        </div>
+        <br>
+        <div class="el_form_Item">
+          <label class="el_Label el_TextRight" for="UserName" style="width: 100px;">班级</label>
+          <input type="text" class="el_Input" placeholder="请输入" id="UserName" />
+        </div>
+        <br>
+        <div class="el_form_Item">
+          <label class="el_Label el_TextRight" for="UserName" style="width: 100px;">联系人1</label>
+          <input type="text" class="el_Input" placeholder="请输入" id="UserName" style="width: 100px;" />
+          <input type="text" class="el_Input" placeholder="请输入" id="UserName" style="width: 130px;" />
+          <input type="text" class="el_Input" placeholder="请输入" id="UserName" style="width: 120px;" />
+          <button class="el_button" style="width: 70px;">删除</button>
+        </div>
+        <br>
+        <div class="el_form_Item">
+          <label class="el_Label el_TextRight" for="UserName" style="width: 100px;">联系人1</label>
+          <input type="text" class="el_Input" placeholder="请输入" id="UserName" />
+          <input type="text" class="el_Input" placeholder="请输入" id="UserName" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 6月10号 模态框 添加人员的弹窗 End -->
+
 </body>
 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 <!-- 下载的 jquery select日历选择器 -->
 <script src="../js/calendar.js"></script>
 <!-- 公共JS -->
 <script src="../js/common.js"></script>
-
+<!-- 模态框 添加人员的弹窗 -->
+<script>
+  $('#Modal_AddPersonnel').on('click', function(){
+    $('.Modal_Mask').show();
+  })
+  $('.Modal_CloseBtn').on('click', function(){
+    $('.Modal_Mask').hide();
+  })
+</script>
 </html>
