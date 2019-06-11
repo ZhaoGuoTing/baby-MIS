@@ -152,17 +152,11 @@ div,ul,li {background: rgba(0, 0, 0, 0.1);}
 
 }
 .el_Label {font-size: 12px;color: #515151;margin-right: 10px;padding: 10px 0;}
-.el_TextRight {
-  float: left;
-  width: 80px;
-  height: 16px;
-  line-height: 16px;
-  text-align: right;
-}
+.el_TextRight {float: left;width: 80px;height: 16px;line-height: 16px;text-align: right;}
 .el_Select {width: 200px;height: 40px;background: #fff;border-color: #dcdfe6;}
 .el_button {color: #fff;background-color: #01c0c8;border-color: #01c0c8;border-radius: 4px;padding: 0 20px;font-weight: 600;margin-right: 20px;cursor: pointer;height: 36px;}
 .el_button:hover {background: #34cdd3;border-color: #34cdd3;}
-.el_button_white {color: #515151;border: 1px solid #dcdfe6;border-radius: 4px;padding: 0 20px;font-weight: 600;cursor: pointer;}
+.el_button_white {color: #515151;border: 1px solid #dcdfe6;border-radius: 4px;padding: 0 20px;font-weight: 600;cursor: pointer;height: 36px;}
 .el_button_white:hover {color: #01c0c8;border-color: #b3ecef;background-color: #e6f9fa;}
 .el_button.ban {background-color: #80e0e4;border-color: #80e0e4;cursor: not-allowed;}
 .el_Paging {display: flex;justify-content: flex-start;align-items: center;font-size: 12px;color: #515151;}
@@ -172,6 +166,39 @@ div,ul,li {background: rgba(0, 0, 0, 0.1);}
 .el_Paging_Num {margin-right: 4px;}
 .footer {height: 60px;line-height: 60px;background: #fff;text-align: center;font-size: 14px;color: #2c2c2c;}
 
+.banned {
+  display: inline-block;
+}
+.banned .icon_Checkbox {
+  font-size: 14px;
+  color: #01c0c8;
+  cursor: pointer;
+}
+.banned .icon_Checkbox_o {
+  font-size: 14px;
+  color: #8a8a8a;
+  cursor: pointer;
+}
+.banned .icon_Checkbox_o:hover {
+   color: #01c0c8;
+}
+.banned .el_em {
+  font-size: 12px;
+  color: #8a8a8a;
+}
+
+.banned.cur .el_button_white {
+  color: #c0c4cc;
+  cursor: not-allowed;
+  background-image: none;
+  background-color: #fff;
+  border-color: #ebeef5;
+}
+
+
+.banned.cur .el_em {
+  color: #01c0c8;
+}
 
 
 

@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/style.css">
   <!-- 字体图标 -->
-  <link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.css" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -912,7 +912,7 @@
     <div class="Modal_AddWrap">
       <div class="ju_Between">
         <div class="el_header">新增宝贝信息</div>
-        <i class="fa fa-window-close p20 Modal_CloseBtn" aria-hidden="true"></i>
+        <i class="fa fa-close p20 Modal_CloseBtn" aria-hidden="true"></i>
       </div>
       <div class="p20">
         <div class="el_form_Item">
@@ -937,11 +937,7 @@
           <label class="el_Label el_TextRight" for="UserName" style="width: 100px;">入园日期</label>
           <input type="date" class="el_Input" placeholder="请输入" id="UserName" />
         </div>
-        <br>
-        <div class="el_form_Item">
-          <label class="el_Label el_TextRight" for="UserName" style="width: 100px;">考勤卡号</label>
-          <input type="text" class="el_Input" placeholder="请输入" id="UserName" />
-        </div>
+        
         <br>
         <div class="el_form_Item">
           <label class="el_Label el_TextRight" for="UserName" style="width: 100px;">班级</label>
@@ -950,16 +946,37 @@
         <br>
         <div class="el_form_Item">
           <label class="el_Label el_TextRight" for="UserName" style="width: 100px;">联系人1</label>
-          <input type="text" class="el_Input" placeholder="请输入" id="UserName" style="width: 100px;" />
-          <input type="text" class="el_Input" placeholder="请输入" id="UserName" style="width: 130px;" />
-          <input type="text" class="el_Input" placeholder="请输入" id="UserName" style="width: 120px;" />
-          <button class="el_button" style="width: 70px;">删除</button>
+          <input type="text" class="el_Input" placeholder="姓名" id="UserName" style="width: 100px;" />
+          <input type="text" class="el_Input" placeholder="电话" id="UserName" style="width: 130px;" />
+          <input type="text" class="el_Input" placeholder="和宝贝关系" id="UserName" style="width: 120px;" />
+          <span class="banned cur">
+            <button class="el_button_white" style="width: 70px;">删除</button>
+              <i class="fa fa-check-square fa-fw icon_Checkbox" aria-hidden="true"></i>
+              <em class="el_em">是否第一联系人</em>
+          </span>
         </div>
         <br>
         <div class="el_form_Item">
-          <label class="el_Label el_TextRight" for="UserName" style="width: 100px;">联系人1</label>
+          <label class="el_Label el_TextRight" for="UserName" style="width: 100px;">联系人2</label>
+          <input type="text" class="el_Input" placeholder="姓名" id="UserName" style="width: 100px;" />
+          <input type="text" class="el_Input" placeholder="电话" id="UserName" style="width: 130px;" />
+          <input type="text" class="el_Input" placeholder="和宝贝关系" id="UserName" style="width: 120px;" />
+          <span class="banned">
+            <button class="el_button_white" style="width: 70px;">删除</button>
+            <i class="fa fa-square-o fa-fw icon_Checkbox_o" aria-hidden="true"></i>
+            <em class="el_em">是否第一联系人</em>
+          </span>
+        </div>
+        <br>
+        <div class="el_form_Item">
+          <label class="el_Label el_TextRight" for="UserName" style="width: 100px;"></label>
+          <button class="el_button_white">新增联系人</button>
+        </div>
+        <br>
+        <div class="el_form_Item">
+          <label class="el_Label el_TextRight" for="UserName" style="width: 100px;">考勤卡号</label>
           <input type="text" class="el_Input" placeholder="请输入" id="UserName" />
-          <input type="text" class="el_Input" placeholder="请输入" id="UserName" />
+          <button class="el_button" style="width: 70px;">绑定</button>
         </div>
       </div>
     </div>
