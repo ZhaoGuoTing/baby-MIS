@@ -164,6 +164,30 @@ div,ul,li {background: rgba(0, 0, 0, 0.1);}
 .el_Paging_Item.cur {background-color: #01c0c8;color: #fff;}
 .el_Paging_Input {width: 46px;height: 28px;border: 1px solid #eee;border-radius: 4px;padding: 0 4px;box-sizing: border-box;padding-left: 10px;margin: 0 4px;}
 .el_Paging_Num {margin-right: 4px;}
+
+
+.el_AdjustClass {
+  width: 400px;
+}
+.el_AdjustClass thead {
+  background: #eef1f6;
+}
+.el_AdjustClass table tr td,th {
+    border: 1px solid #ebeef5;
+    text-align: center;
+    height: 56px;
+    line-height: 56px;
+    color: #707070;
+    font-size: 14px;
+}
+
+.el_transitBtn {
+  width: 60px;
+}
+
+
+
+
 .footer {height: 60px;line-height: 60px;background: #fff;text-align: center;font-size: 14px;color: #2c2c2c;}
 
 .banned {
@@ -319,7 +343,8 @@ div,ul,li {background: rgba(0, 0, 0, 0.1);}
 /* 
   模态框 弹窗样式
 */
-.Modal_Mask {
+.Modal_BatchSwitchedMask,
+.Modal_AddWrapMask {
   position: fixed;
   top: 0;
   right: 0;
@@ -332,6 +357,7 @@ div,ul,li {background: rgba(0, 0, 0, 0.1);}
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, .3);
+  display: none;
 }
 .Modal_AddWrap {
   width: 750px;
@@ -340,6 +366,9 @@ div,ul,li {background: rgba(0, 0, 0, 0.1);}
   left: 0;
   position: relative;
   margin: 0 auto;
+}
+.Modal_CloseBtn:hover {
+  color: #01c0c8;
 }
 /* 
   媒体查询 (max-width: 1440px) media="小于等于1440px"

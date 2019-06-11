@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="../css/style.css">
   <!-- 字体图标 -->
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="../css/font.css"> -->
 </head>
 
 <body>
@@ -791,7 +792,7 @@
                   <br/>
                   <div class="ju_Start">
                     <button type="button" class="el_button" id="Modal_AddPersonnel">新增宝贝</button>
-                    <button type="button" class="el_button">批量调班</button>
+                    <button type="button" class="el_button" id="Modal_BatchSwitched">批量调班</button>
                     <button type="button" class="el_button ban" disabled="disabled">批量离园</button>
                     <button type="button" class="el_button">导入<i class="fa fa-angle-down fa-fw"aria-hidden="true"></i></button>
                   </div>
@@ -908,7 +909,7 @@
   <!-- 6月10号 模态框 添加人员的弹窗 Start -->
   <!-- 模态框 添加人员的弹窗 -->
   <!-- 模态框 添加人员的弹窗 -->
-  <div class="Modal_Mask">
+  <div class="Modal_AddWrapMask">
     <div class="Modal_AddWrap">
       <div class="ju_Between">
         <div class="el_header">新增宝贝信息</div>
@@ -982,6 +983,100 @@
     </div>
   </div>
   <!-- 6月10号 模态框 添加人员的弹窗 End -->
+  <!-- 6月11号 模态框 批量调班的弹窗 Start -->
+  <div class="Modal_BatchSwitchedMask">
+    <div class="Modal_AddWrap" style="width: 900px;">
+      <div class="ju_Between">
+        <div class="el_header" style="border: none;">批量调班</div>
+        <i class="fa fa-close p20 Modal_CloseBtn" aria-hidden="true"></i>
+      </div>
+      <div class="p20">
+        <div class="ju_Between">
+          <div class="el_AdjustClass">
+            调整前班级
+            <table width="400">
+              <thead>
+                <tr>
+                  <th>
+                    <i class="fa fa-square-o fa-fw" aria-hidden="true"></i>
+                    <i class="fa fa-minus-square fa-fw" aria-hidden="true"></i>
+                    <i class="fa fa-check-square fa-fw" aria-hidden="true"></i>
+                  </th>
+                  <th>姓名</th>
+                  <th>班级</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <i class="fa fa-square-o fa-fw" aria-hidden="true"></i>
+                  </td>
+                  <td>苗苗1</td>
+                  <td>苹果一班</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>苗苗2</td>
+                  <td>苹果一班</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>苗苗3</td>
+                  <td>苹果一班</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="el_transitBtn">圈》圈</div>
+          <div class="el_AdjustClass">
+            调整后班级
+            <table width="400">
+              <thead>
+                <tr>
+                  <th>
+                    <i class="fa fa-square-o fa-fw" aria-hidden="true"></i>
+                    <i class="fa fa-minus-square fa-fw" aria-hidden="true"></i>
+                    <i class="fa fa-check-square fa-fw" aria-hidden="true"></i>
+                  </th>
+                  <th>姓名</th>
+                  <th>班级</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <i class="fa fa-square-o fa-fw" aria-hidden="true"></i>
+                  </td>
+                  <td>苗苗9</td>
+                  <td>菠萝一班</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>苗苗8</td>
+                  <td>菠萝一班</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>苗苗7</td>
+                  <td>菠萝一班</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div>
+          <p>1. 调班后原班级的他人动态不可见，原班级自己发的动态依旧可见</p>
+          <p>2. 调班后原班级的亲子任务、周计划不可见</p>
+          <p>3. 新学年升班请使用升班功能</p>
+        </div>
+        <div>
+          <button class="el_button_white" style="width: 70px;">取消</button>
+          <button class="el_button" style="width: 70px;">确定</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 6月11号 模态框 批量调班的弹窗 End -->
 
 </body>
 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
@@ -992,10 +1087,37 @@
 <!-- 模态框 添加人员的弹窗 -->
 <script>
   $('#Modal_AddPersonnel').on('click', function(){
-    $('.Modal_Mask').show();
+    $('.Modal_AddWrapMask').show();
   })
   $('.Modal_CloseBtn').on('click', function(){
-    $('.Modal_Mask').hide();
+    $(this).parents('.Modal_AddWrapMask').hide();
   })
 </script>
+<!-- 模态框 批量调班的弹窗 -->
+<script>
+  $('#Modal_BatchSwitched').on('click', function() {
+    $('.Modal_BatchSwitchedMask').show();
+  })
+  $('.Modal_CloseBtn').on('click', function () {
+    $(this).parents('.Modal_BatchSwitchedMask').hide();
+  })  
+</script>
+
+
+
+<!-- 6月11日 批量调班 start -->
+<script>
+  $('.el_AdjustClass td i').on('click', function() {
+    if ($(this).hasClass('fa fa-square-o fa-fw')) {
+      $(this).attr("class", "fa fa-check-square fa-fw")
+    } else {
+      $(this).attr("class", "fa fa-square-o fa-fw")
+    }
+  })
+
+  if ($('.el_AdjustClass td i').hasClass('fa fa-check-square fa-fw')) {
+    
+  }
+</script>
+<!-- 6月11日 批量调班 end -->
 </html>
