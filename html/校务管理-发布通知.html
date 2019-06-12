@@ -6,13 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>掌心宝贝-幼儿园管理平台</title>
-  <!-- 公共样式 -->
   <link rel="stylesheet" href="../css/common.css">
-  <!-- 下载的 jquery select日历选择器  -->
-  <link rel="stylesheet" href="../css/style.css">
   <!-- 字体图标 -->
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="../css/font.css"> -->
+  <link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.css" rel="stylesheet">
 </head>
 
 <body>
@@ -742,449 +738,47 @@
       <div class="path">
         <span>首页</span>
         <em>/</em>
-        <span>人员管理</span>
+        <span>校务管理</span>
         <em>/</em>
-        <span>宝贝管理</span>
-        <em>/</em>
-        <span>在园宝贝</span>
+        <span>发布通知</span>
       </div>
       <div class="panel_Cont">
         <div class="el_box" id="tab" style="width: 100%;">
-          <ol class="el_header">
-            <li class="cur">在园宝贝</li>
-            <li>离园宝贝</li>
-          </ol>
-          <ul class="p20">
-            <li class="tabPanel_Item">
-              <div>
-                <form class="" action="index.html（url地址）" method="post" name="表单名称">
-                  <div class="ju_Start">
-                    <div class="el_form_Item">
-                      <label class="el_Label" for="UserName">宝贝姓名</label>
-                      <input type="text" class="el_Input" placeholder="请输入" id="UserName"/>
-                    </div>
-                    <div class="el_form_Item">
-                      <label class="el_Label" for="ParentsName">家长姓名</label>
-                      <input type="text" class="el_Input" placeholder="请输入" id="ParentsName"/>
-                    </div>
-                    <div style="width:580px;position:relative;">
-                      <label class="el_Label">入园时间</label>
-                      <select class='custom-date el_InputDate' name='select'>
-                        <option selected='selected' value='90'>开始日期 &nbsp; 至 &nbsp; 结束日期</option>
-                      </select>
-                    </div>
-                  </div>
-                  <br/>
-                  <div class="ju_Start">
-                      <div class="el_form_Item">
-                        <label class="el_Label" for="phoneNumber">联系电话</label>
-                        <input type="tel" class="el_Input" placeholder="请输入" id="phoneNumber" />
-                      </div>
-                      <div class="el_form_Item">
-                        <label class="el_Label" for="CardNumber">考勤卡号</label>
-                        <input type="tel" class="el_Input" placeholder="请输入" id="CardNumber" />
-                      </div>
-                      <div class="el_form_Item" style="position: relative;">
-                        <label class="el_Label" for="Class">所在班级</label>
-                        <input type="tel" class="el_select" placeholder="请选择" value="苹果一班">
-                        <i class="fa fa-angle-down fa-fw selectIcon"></i>
-                        <div class="el_downMenu">
-                          <ul>
-                            <li class="el_downMenu_Item">苹果一班</li>
-                            <li class="el_downMenu_Item">菠萝一班</li>
-                          </ul>
-                        </div>
-                      </div>
-                      <button type="button" class="el_button"><i class="fa fa-search fa-fw" aria-hidden="true"style="margin-right: 4px;"></i>查询</button>
-                      <button type="button" class="el_button_white">重置</button>
-                  </div>
-                  <br/>
-                  <div class="ju_Start">
-                    <button type="button" class="el_button" id="Modal_AddPersonnel">新增宝贝</button>
-                    <button type="button" class="el_button" id="Modal_BatchSwitched">批量调班</button>
-                    <button type="button" class="el_button ban" disabled="disabled">批量离园</button>
-                    <button type="button" class="el_button">导入<i class="fa fa-angle-down fa-fw"aria-hidden="true"></i></button>
-                  </div>
-                  <br />
-                </form>
+          <div class="ju_Between p20">
+            <div class="fl_FormList">
+              <div class="el_form_Item">
+                <label class="el_Label el_TextRight" for="UserName" style="width: 100px;"><strong>*</strong>通知标题</label>
+                <input type="text" class="el_Input" placeholder="请输入" id="UserName" style="width: 560px;" required>
               </div>
-              <table class="el_table" align="center" border="1" cellspacing="0" cellpadding="0">
-                <caption></caption>
-                <thead>
-                  <tr>
-                    <th><input type="checkbox"></th>
-                    <th>编号</th>
-                    <th>宝贝姓名</th>
-                    <th>性别</th>
-                    <th>出生日期</th>
-                    <th>所在班级</th>
-                    <th>家长姓名</th>
-                    <th>联系电话</th>
-                    <th>入园时间</th>
-                    <th>考勤卡号</th>
-                    <th>操作</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><input type="checkbox"></td>
-                    <td>1</td>
-                    <td>李刚</td>
-                    <td>未知</td>
-                    <td>1999-09-09</td>
-                    <td>菠萝一班</td>
-                    <td>李刚家长</td>
-                    <td>13439556016</td>
-                    <td>1999-09-09</td>
-                    <td>09876-098765</td>
-                    <td>
-                      <div class="ju_Around">
-                        <a href="javascript:void(0);" class="operation">编辑</a>
-                        <a href="javascript:void(0);" class="operation">家长管理</a>
-                        <a href="javascript:void(0);" class="operation">绑定考勤卡</a>
-                        <a href="javascript:void(0);" class="operation">离园</a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox"></td>
-                    <td>1</td>
-                    <td>李刚</td>
-                    <td>未知</td>
-                    <td>1999-09-09</td>
-                    <td>菠萝一班</td>
-                    <td>李刚家长</td>
-                    <td>13439556016</td>
-                    <td>1999-09-09</td>
-                    <td>09876-098765</td>
-                    <td>
-                      <div class="ju_Around">
-                        <a href="javascript:void(0);" class="operation">编辑</a>
-                        <a href="javascript:void(0);" class="operation">家长管理</a>
-                        <a href="javascript:void(0);" class="operation">绑定考勤卡</a>
-                        <a href="javascript:void(0);" class="operation">离园</a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox"></td>
-                    <td>1</td>
-                    <td>李刚</td>
-                    <td>未知</td>
-                    <td>1999-09-09</td>
-                    <td>菠萝一班</td>
-                    <td>李刚家长</td>
-                    <td>13439556016</td>
-                    <td>1999-09-09</td>
-                    <td>09876-098765</td>
-                    <td>
-                      <div class="ju_Around">
-                        <a href="javascript:void(0);" class="operation">编辑</a>
-                        <a href="javascript:void(0);" class="operation">家长管理</a>
-                        <a href="javascript:void(0);" class="operation">绑定考勤卡</a>
-                        <a href="javascript:void(0);" class="operation">离园</a>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <br />
-              <div class="ju_Between">
-                <button type="button" class="el_button"><i class="fa fa-download" aria-hidden="true" style="margin-right: 4px;"></i>导出</button>
-                <div class="el_Paging">
-                  <span class="el_Paging_Num">共 57 条</span>
-                  <ul class="ju_Start">
-                    <li class="el_Paging_Item"><i class="fa fa-angle-left" aria-hidden="true"></i></li>
-                    <li class="el_Paging_Item">1</li>
-                    <li class="el_Paging_Item cur">2</li>
-                    <li class="el_Paging_Item">3</li>
-                    <li class="el_Paging_Item">4</li>
-                    <li class="el_Paging_Item">5</li>
-                    <li class="el_Paging_Item">6</li>
-                    <li class="el_Paging_Item"><i class="fa fa-angle-right" aria-hidden="true"></i></li>
-                  </ul>
-                  <div>前往<input class="el_Paging_Input" type="number" min="1" max="11">页</div>
-                  
+              <br>
+              <div class="el_form_Item">
+                <label class="el_Label el_TextRight" for="UserName" style="width: 100px;"><strong>*</strong>通知标题</label>
+                <input type="text" class="el_Input" placeholder="请输入" id="UserName" style="width: 560px;" required>
+              </div>
+              <br>
+              <div class="el_form_Item">
+                <label class="el_Label el_TextRight" for="UserName" style="width: 100px;"><strong>*</strong>通知类型</label>
+                <div class="el_Radio">
+                  <input type="radio" name="sex"> 普通通知
+                  <input type="radio" name="sex"> 报名活动
+                  <input type="radio" name="sex"> 投票通知
                 </div>
               </div>
-            </li>
-            <li class="tabPanel_Item">2</li>
-          </ul>
+            </div>
+            <div class="fr_View">
+              <div class="iphone"></div>
+              <!-- qwerty -->
+              
+              <!--  -->
+            </div>
+          </div>
         </div>
       </div>
       <div class="footer">Copyright © 2019 深圳市云领天下科技有限公司</div>
     </div>
   </div>
-  <!-- 6月10号 模态框 添加人员的弹窗 Start -->
-  <!-- 模态框 添加人员的弹窗 -->
-  <!-- 模态框 添加人员的弹窗 -->
-  <div class="Modal_AddWrapMask">
-    <div class="Modal_AddWrap">
-      <div class="ju_Between">
-        <div class="el_header" style="border: none;">新增宝贝信息</div>
-        <i class="fa fa-close p20 Modal_CloseBtn" aria-hidden="true"></i>
-      </div>
-      <div class="p20">
-        <div class="el_form_Item">
-          <label class="el_Label el_TextRight" for="UserName" style="width: 100px;">宝贝姓名</label>
-          <input type="text" class="el_Input" placeholder="请输入" id="UserName" />
-        </div>
-        <br>
-        <div class="el_form_Item">
-          <label class="el_Label el_TextRight" for="UserName" style="width: 100px;">性别</label>
-          <div class="el_Radio">
-            <input type="radio" name="sex"> 男
-            <input type="radio" name="sex"> 女
-          </div>
-        </div>
-        <br>
-        <div class="el_form_Item">
-          <label class="el_Label el_TextRight" for="UserName" style="width: 100px;">出生日期</label>
-          <input type="date" class="el_Input" placeholder="请输入" id="UserName" />
-        </div>
-        <br>
-        <div class="el_form_Item">
-          <label class="el_Label el_TextRight" for="UserName" style="width: 100px;">入园日期</label>
-          <input type="date" class="el_Input" placeholder="请输入" id="UserName" />
-        </div>
-        
-        <br>
-        <div class="el_form_Item" style="position: relative;">
-          <label class="el_Label el_TextRight" for="UserName" style="width: 100px;">班级</label>
-          <input type="tel" class="el_select" placeholder="请选择" value="苹果一班">
-          <i class="fa fa-angle-down fa-fw selectIcon" style="left: 266px;"></i>
-          <div class="el_downMenu" style="margin-left: 110px;">
-            <ul>
-              <li class="el_downMenu_Item">苹果一班</li>
-              <li class="el_downMenu_Item">菠萝一班</li>
-            </ul>
-          </div>
-        </div>
-        <br>
-        <div class="el_form_Item">
-          <label class="el_Label el_TextRight" for="UserName" style="width: 100px;">联系人1</label>
-          <input type="text" class="el_Input" placeholder="姓名" id="UserName" style="width: 100px;" />
-          <input type="text" class="el_Input" placeholder="电话" id="UserName" style="width: 130px;" />
-          <div class="BabyInput_Wrap">
-            <input type="text" class="el_Input" placeholder="和宝贝关系" id="UserName" style="width: 120px;" />
-            <div class="Baby_upMenu">
-              <ul>
-                <li class="el_downMenu_Item">爸爸</li>
-                <li class="el_downMenu_Item">妈妈</li>
-                <li class="el_downMenu_Item">爷爷</li>
-                <li class="el_downMenu_Item">奶奶</li>
-                <li class="el_downMenu_Item">外公</li>
-                <li class="el_downMenu_Item">外婆</li>
-                <li class="el_downMenu_Item">其他</li>
-              </ul>
-            </div>
-          </div>
-          <span class="banned cur">
-            <button class="el_button_white" style="width: 70px;">删除</button>
-              <i class="fa fa-check-square fa-fw icon_Checkbox" aria-hidden="true"></i>
-              <em class="el_em">是否第一联系人</em>
-          </span>
-        </div>
-        <br>
-        <div class="el_form_Item">
-          <label class="el_Label el_TextRight" for="UserName" style="width: 100px;">联系人2</label>
-          <input type="text" class="el_Input" placeholder="姓名" id="UserName" style="width: 100px;" />
-          <input type="text" class="el_Input" placeholder="电话" id="UserName" style="width: 130px;" />
-          <div class="BabyInput_Wrap">
-            <input type="text" class="el_Input" placeholder="和宝贝关系" id="UserName" style="width: 120px;" />
-            <div class="Baby_upMenu">
-              <ul>
-                <li class="el_downMenu_Item">爸爸</li>
-                <li class="el_downMenu_Item">妈妈</li>
-                <li class="el_downMenu_Item">爷爷</li>
-                <li class="el_downMenu_Item">奶奶</li>
-                <li class="el_downMenu_Item">外公</li>
-                <li class="el_downMenu_Item">外婆</li>
-                <li class="el_downMenu_Item">其他</li>
-              </ul>
-            </div>
-          </div>
-          <span class="banned">
-            <button class="el_button_white" style="width: 70px;">删除</button>
-            <i class="fa fa-square-o fa-fw icon_Checkbox_o" aria-hidden="true"></i>
-            <em class="el_em">是否第一联系人</em>
-          </span>
-        </div>
-        <br>
-        <div class="el_form_Item">
-          <label class="el_Label el_TextRight" for="UserName" style="width: 100px;"></label>
-          <button class="el_button_white">新增联系人</button>
-        </div>
-        <br>
-        <div class="el_form_Item">
-          <label class="el_Label el_TextRight" for="UserName" style="width: 100px;">考勤卡号</label>
-          <input type="text" class="el_Input" placeholder="请输入" id="UserName" />
-          <button class="el_button" style="width: 70px;">绑定</button>
-        </div>
-        <div class="ju_End pt50">
-          <button class="el_button_white" style="width: 70px;margin: 0 10px;">取消</button>
-          <button class="el_button" style="width: 70px;margin: 0 10px;">确定</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- 6月10号 模态框 添加人员的弹窗 End -->
-  <!-- 6月11号 模态框 批量调班的弹窗 Start -->
-  <div class="Modal_BatchSwitchedMask">
-    <div class="Modal_AddWrap" style="width: 900px;">
-      <div class="ju_Between">
-        <div class="el_header" style="border: none;">批量调班</div>
-        <i class="fa fa-close p20 Modal_CloseBtn" aria-hidden="true"></i>
-      </div>
-      <div class="p20">
-        <div class="ju_Between">
-          <div class="el_AdjustClass">
-            <div class="font_515151">
-              调整前
-            </div>
-            <div class="el_form_Item mv10" style="position: relative;">
-              <label class="el_Label" for="Class">所在班级</label>
-              <input type="tel" class="el_select" placeholder="请选择" value="苹果一班">
-              <i class="fa fa-angle-down fa-fw selectIcon"></i>
-              <div class="el_downMenu">
-                <ul>
-                  <li class="el_downMenu_Item">苹果一班</li>
-                  <li class="el_downMenu_Item">菠萝一班</li>
-                </ul>
-              </div>
-            </div>
-            <table class="el_table" style="width: 400px;">
-              <thead>
-                <tr>
-                  <th><input type="checkbox"></th>
-                  <th>姓名</th>
-                  <th>班级</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td>胡弘毅</td>
-                  <td>苹果一班</td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td>范华思涵</td>
-                  <td>苹果一班</td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td>徐梓琛</td>
-                  <td>苹果一班</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="ju_Center al_Center" style="padding-top: 100px;">
-            <button class="el_transitBtn">
-              <i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>
-            </button>
-          </div>
-          <div class="el_AdjustClass">
-            <div class="font_515151">
-              调整后
-            </div>
-            <div class="el_form_Item mv10" style="position: relative;">
-              <label class="el_Label" for="Class">所在班级</label>
-              <input type="tel" class="el_select" placeholder="请选择" value="苹果一班">
-              <i class="fa fa-angle-down fa-fw selectIcon"></i>
-              <div class="el_downMenu">
-                <ul>
-                  <li class="el_downMenu_Item">苹果一班</li>
-                  <li class="el_downMenu_Item">菠萝一班</li>
-                </ul>
-              </div>
-            </div>
-            <table class="el_table" style="width: 400px;">
-              <thead>
-                <tr>
-                  <th>姓名</th>
-                  <th>原班级</th>
-                  <th>操作</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>席慧慧</td>
-                  <td>苹果一班</td>
-                  <td class="BackClass">回原班</td>
-                </tr>
-                <tr>
-                  <td>小丸子</td>
-                  <td>苹果一班</td>
-                  <td class="BackClass">回原班</td>
-                </tr>
-                <tr>
-                  <td>李刚</td>
-                  <td></td>
-                  <td class="BackClass"></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="font_515151 pv20">
-          <p>1. 调班后原班级的他人动态不可见，原班级自己发的动态依旧可见</p>
-          <p>2. 调班后原班级的亲子任务、周计划不可见</p>
-          <p>3. 新学年升班请使用升班功能</p>
-        </div>
-        <div class="ju_Center">
-          <button class="el_button_white" style="width: 70px;margin: 0 10px;">取消</button>
-          <button class="el_button" style="width: 70px;margin: 0 10px;">确定</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- 6月11号 模态框 批量调班的弹窗 End -->
-
 </body>
 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
-<!-- 下载的 jquery select日历选择器 -->
-<script src="../js/calendar.js"></script>
-<!-- 公共JS -->
 <script src="../js/common.js"></script>
-<!-- 模态框 添加人员的弹窗 -->
-<script>
-  $('#Modal_AddPersonnel').on('click', function(){
-    $('.Modal_AddWrapMask').show();
-  })
-  $('.Modal_CloseBtn').on('click', function(){
-    $(this).parents('.Modal_AddWrapMask').hide();
-  })
-</script>
-<!-- 模态框 批量调班的弹窗 -->
-<script>
-  $('#Modal_BatchSwitched').on('click', function() {
-    $('.Modal_BatchSwitchedMask').show();
-  })
-  $('.Modal_CloseBtn').on('click', function () {
-    $(this).parents('.Modal_BatchSwitchedMask').hide();
-  })  
-</script>
 
-<!-- input 下拉框 苹果一班 -->
-<script>
-  $('.el_select').on("click", function(e){
-    $(this).siblings('.el_downMenu').stop().slideToggle(100);
-    e.stopPropagation();
-      $(document).on("click", function(){
-      $('.el_downMenu').slideUp(100);
-    });
-  });
-</script>
-<!-- input 下拉框 和宝贝关系 -->
-<script>
-  $('.BabyInput_Wrap input').on('click', function(e) {
-    $(this).siblings('.Baby_upMenu').stop().slideToggle(100);
-     e.stopPropagation();
-        $(document).on("click", function(){
-        $('.Baby_upMenu').slideUp(100);
-    });
-  })
-</script>
 </html>
