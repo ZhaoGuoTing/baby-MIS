@@ -71,3 +71,19 @@ $('#tab ol li').on('click', function () {
       $('.Baby_upMenu').slideUp(100);
     });
   })
+
+// <!-- 校务管理-发布通知-通知类型和发布范围的选项卡的选项卡 -->
+  el_Tab($('.NotificationType_ControlItem'))
+  el_Tab($('.Release_ControlItem'))
+  el_Tab($('.APP_ReleasePeople_ControlItem'))
+  el_Tab($('.template_Right_Item'))
+  el_Tab($('.template_Left_Item'))
+  el_Tab($('.swiper-slide'))
+
+  function el_Tab(Control) {
+    Control.on('click', function () {
+      $(this).addClass('cur').siblings().removeClass('cur');
+      // Panel.eq($(this).index()).show().siblings().hide();
+    })
+  }
+

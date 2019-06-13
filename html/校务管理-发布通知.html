@@ -8,10 +8,12 @@
   <title>掌心宝贝-幼儿园管理平台</title>
   <!-- Swiper css -->
   <link rel="stylesheet" href="https://cdn.bootcss.com/Swiper/4.2.0/css/swiper.min.css">
-
+  <!-- 下载的 jquery select日历选择器  -->
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- 公共样式 -->
   <link rel="stylesheet" href="../css/common.css">
   <!-- 字体图标 -->
-  <link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.css" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -754,21 +756,23 @@
                 <input type="text" class="el_Input" placeholder="请输入" id="UserName" style="width: 560px;" required>
               </div>
               <br>
+              <br>
               <div class="el_form_Item" style="height: auto;">
                 <label class="el_Label el_TextRight" for="UserName" style="width: 100px;"><strong>*</strong>通知标题</label>
                 <img style="width: 560px;height: 310px;" src="../img/editor.png" alt="">
               </div>
               <br>
+              <br>
               <div class="el_form_Item">
                 <label class="el_Label el_TextRight" for="UserName" style="width: 100px;"><strong>*</strong>通知类型</label>
                 <div class="el_Radio al_Center">
-                  <div class="Tab_Control_Item cur">
+                  <div class="Tab_Control_Item cur NotificationType_ControlItem">
                     <div class="el_Radio_Circle"></div>普通通知
                   </div>
-                  <div class="Tab_Control_Item">
+                  <div class="Tab_Control_Item NotificationType_ControlItem">
                     <div class="el_Radio_Circle"></div>报名活动
                   </div>
-                  <div class="Tab_Control_Item">
+                  <div class="Tab_Control_Item NotificationType_ControlItem">
                     <div class="el_Radio_Circle"></div>投票通知
                   </div>
                 </div>
@@ -778,7 +782,7 @@
               <div class="el_form_Item">
                 <label class="el_Label el_TextRight" for="UserName" style="width: 100px;">选择模板</label>
                 <div class="el_Radio al_Center">
-                  <div class="Tab_Panel_Item">
+                  <div class="Tab_Panel_Item NotificationType_PanelItem">
                     <div class="template_Right">
                       <div class="template_Right_Item cur">园务管理</div>
                       <div class="template_Right_Item">班级日常</div>
@@ -797,10 +801,33 @@
                       <div class="template_Left_Item">六一儿童节活动邀请</div>
                     </div>
                   </div>
-                  <div class="Tab_Panel_Item">2</div>
-                  <div class="Tab_Panel_Item">3</div>
+                  <div class="Tab_Panel_Item NotificationType_PanelItem">2</div>
+                  <div class="Tab_Panel_Item NotificationType_PanelItem">3</div>
                 </div>
               </div>
+              <br>
+              <div style="width:580px;position:relative;">
+                <label class="el_Label el_TextRight" for="UserName" style="width: 100px;"><strong>*</strong>活动时间</label>
+                <select class='custom-date el_InputDate' name='select'>
+                  <option selected='selected' value='90'>开始日期 &nbsp; 至 &nbsp; 结束日期</option>
+                </select>
+              </div>
+              <br>
+              <div class="el_form_Item">
+                <label class="el_Label el_TextRight" for="UserName" style="width: 100px;"><strong>*</strong>联系人</label>
+                <input type="text" class="el_Input" placeholder="请输入" id="UserName" />
+              </div>
+              <br>
+              <div class="el_form_Item">
+                <label class="el_Label el_TextRight" for="UserName" style="width: 100px;"><strong>*</strong>联系电话</label>
+                <input type="text" class="el_Input" placeholder="请输入" id="UserName" />
+              </div>
+              <br>
+              <div class="el_form_Item">
+                <label class="el_Label el_TextRight" for="UserName" style="width: 100px;"><strong>*</strong>报名人数</label>
+                <input type="text" class="el_Input" placeholder="请输入" id="UserName" />
+              </div>
+              <br>
               <br>
               <div class="el_form_Item" style="position: relative;">
                 <label class="el_Label el_TextRight" for="UserName" style="width: 100px;"><strong>*</strong>短信提示</label>
@@ -816,37 +843,194 @@
                 </div>
               </div>
               <br>
+              <br>
               <div class="el_form_Item" style="height: auto;">
                 <label class="el_Label el_TextRight" for="UserName" style="width: 100px;">选择背景图</label>
-                    <!-- Swiper -->
-                    <div class="swiper-container">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                          <div class="selectBgList_Item">
-                            <img class="selectBgList_Img" src="" alt="">
-                            <h6>无背景</h6>
-                          </div>
-                        </div>
-                        <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div>
-                        <div class="swiper-slide">Slide 4</div>
-                        <div class="swiper-slide">Slide 5</div>
-                        <div class="swiper-slide">Slide 6</div>
+                <!-- Swiper -->
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="selectBgList_Item">
+                        <img class="selectBgList_Img" src="../img/Choose_Pic1.png" alt="">
+                        <h6>无背景</h6>
                       </div>
-                          <!-- Add Pagination -->
-                          <div class="swiper-pagination"></div>
                     </div>
-                  <!-- <div class="selectBgList_Item">
-                    <img class="selectBgList_Img" src="" alt="">
-                    <h6>无背景</h6>
-                  </div> -->
+                    <div class="swiper-slide cur">
+                      <div class="selectBgList_Item">
+                        <img class="selectBgList_Img" src="../img/Choose_Pic2.jpg" alt="">
+                        <h6>成长</h6>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="selectBgList_Item">
+                        <img class="selectBgList_Img" src="../img/Choose_Pic3.jpg" alt="">
+                        <h6>春游</h6>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="selectBgList_Item">
+                        <img class="selectBgList_Img" src="../img/Choose_Pic4.jpg" alt="">
+                        <h6>地球日</h6>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="selectBgList_Item">
+                        <img class="selectBgList_Img" src="../img/Choose_Pic5.jpg" alt="">
+                        <h6>发明家</h6>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="selectBgList_Item">
+                        <img class="selectBgList_Img" src="../img/Choose_Pic6.jpg" alt="">
+                        <h6>花季</h6>
+                      </div>
+                    </div>
+                  </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+              </div>
+              <br>
+              <br>
+              <div class="el_form_Item" style="height: auto;">
+                <label class="el_Label el_TextRight" for="UserName" style="width: 100px;">添加图片</label>
+                <div class="upload">
+                  <img class="" src="../img/Choose_Pic6.jpg" alt="">
+                </div>
+                <div class="upload">
+                  <input type="file">
+                  <i class="fa fa-image fa-2x" aria-hidden="true"></i>
+                </div>
+              </div>
+              <br>
+              <br>
+              <div class="el_form_Item">
+                <label class="el_Label el_TextRight" for="UserName" style="width: 100px;"><strong>*</strong>发布范围</label>
+                <div class="el_Radio al_Center">
+                  <div class="Tab_Control_Item cur Release_ControlItem">
+                    <div class="el_Radio_Circle"></div>职工和家长
+                  </div>
+                  <div class="Tab_Control_Item Release_ControlItem">
+                    <div class="el_Radio_Circle"></div>仅职工
+                  </div>
+                  <div class="Tab_Control_Item Release_ControlItem">
+                    <div class="el_Radio_Circle"></div>仅家长
+                  </div>
+                </div>
+              </div>
+              <br>
+              <br>
+              <div class="el_form_Item">
+                <label class="el_Label el_TextRight" for="UserName" style="width: 100px;"></label>
+                <div class="el_Radio al_Center">
+                  <div class="Tab_Panel_Item Release_PanelItem">
+                    <div class="ju_Start">
+                      <dl style="width: 80px">
+                        <dd>
+                          <div class="push_PeopleItem">
+                            <input type="checkbox">
+                            <span>全选</span>
+                          </div>
+                        </dd>
+                      </dl>
+                      <dl style="width: 180px;padding: 0 20px;box-sizing: border-box;border-left: 1px solid #eee;">
+                        <dd class="ju_Between">
+                          <div class="push_PeopleItem">
+                            <input type="checkbox">
+                            <span>苹果一班</span>
+                          </div>
+                          <div>1/3</div>
+                        </dd>
+                        <dd class="ju_Between">
+                          <div class="push_PeopleItem">
+                            <input type="checkbox">
+                            <span>菠萝一班</span>
+                          </div>
+                          <div>1/33</div>
+                        </dd>
+                      </dl>
+                      <dl style="width: 300px;padding: 0 20px;box-sizing: border-box; flex-wrap: wrap;display: flex;border-left: 1px solid #eee;"
+                        class="ju_Start">
+                        <dd class="ju_Between">
+                          <div class="push_PeopleItem">
+                            <input type="checkbox">
+                            <span>罗晨皓的妈妈</span>
+                          </div>
+                        </dd>
+                        <dd class="ju_Between">
+                          <div class="push_PeopleItem">
+                            <input type="checkbox">
+                            <span>杨家俊的妈妈</span>
+                          </div>
+                        </dd>
+                        <dd class="ju_Between">
+                          <div class="push_PeopleItem">
+                            <input type="checkbox">
+                            <span>张同学的爸爸</span>
+                          </div>
+                        </dd>
+                      </dl>
+                    </div>
+                  </div>
+                  <div class="Tab_Panel_Item Release_PanelItem">2</div>
+                  <div class="Tab_Panel_Item Release_PanelItem">3</div>
+                </div>
+              </div>
+              <br>
+              <br>
+              <div class="el_form_Item">
+                <label class="el_Label el_TextRight" for="UserName" style="width: 100px;"><strong>*</strong>APP发布人显示</label>
+                <div class="el_Radio al_Center">
+                  <div class="Tab_Control_Item cur APP_ReleasePeople_ControlItem">
+                    <div class="el_Radio_Circle"></div>发布人
+                  </div>
+                  <div class="Tab_Control_Item APP_ReleasePeople_ControlItem">
+                    <div class="el_Radio_Circle"></div>幼儿园名称
+                  </div>
+                </div>
+              </div>
+              <div class="ju_Center pt50">
+                <button class="el_button" style="width: 70px;margin: 0 10px;">发布</button>
+                <button class="el_button_white" style="margin: 0 10px;">返回列表</button>
               </div>
             </div>
             <div class="fr_View">
-              <div class="iphone">
-                <div class="iphone_Cont">
-                  23456789
+              <div class="iphone"></div>
+              <div class="iphone_Cont iphone_Bg1">
+                <div class="img-top">
+                  <img src="../img/Choose_Pic2_Top.jpg" alt="">
                 </div>
+                <div class="main">
+                  <h4>标题图</h4>
+                  <div class="user_Info">
+                    <div class="user_Pic">
+                      <img src="https://www.dummyimage.com/32x32/000/fff" alt="">
+                    </div>
+                    <div class="user_Time">发表于 2019-06-13 13:57:55</div>
+                  </div>
+                  <div class="article_Cont">
+                    <h2>尊敬的家长：</h2>
+                    <p>气象台发布暴雨蓝色预警信号，受台风气流和弱冷空气的共同影响，本市14日风力开始加大；15-16日有中到大雨局部暴雨。请各位家长密切关注气象信息，台风期间注意安全、加强监护并确保孩子的安全。</p>
+                    <br>
+                    <p class="ju_End"> *****幼儿园</p>
+                    <p class="ju_End"> ****年**月**日</p>
+                  </div>
+                  <div class="user_PushPic">
+                    <img src="https://www.dummyimage.com/600x400/000/fff" alt="">
+                  </div>
+                  <div class="article_Cont">
+                    <p><b>报名开始时间：</b><i>2019-06-13 14:46:38</i></p>
+                    <p><b>报名结束时间：</b><i>2019-06-20 14:46:38</i></p>
+                    <p><b>联系人：</b><i>朱嘉琪</i></p>
+                    <p><b>联系电话：</b><i>18312341234</i></p>
+                    <p><b>总人数：</b><i>312人</i></p>
+                    <p><b>已报名：</b><i>0人</i></p>
+                  </div>
+                </div>
+                <div class="img-bottom">
+                  <img src="../img/Choose_Pic2_Bottom.jpg" alt="">
+                </div>
+                
               </div>
               <!-- qwerty -->
               
@@ -862,35 +1046,34 @@
 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
   <!-- Swiper JS -->
 <script type="text/javascript " src="https://cdn.bootcss.com/Swiper/4.5.0/js/swiper.js"></script>
-
+<!-- 下载的 jquery select日历选择器 -->
+<script src="../js/calendar.js"></script>
+<!-- 公共JS -->
 <script src="../js/common.js"></script>
-<!-- 通知类型的选项卡 -->
-<script>
-  $('.Tab_Control_Item').on('click', function() {
-    $(this).addClass('cur').siblings().removeClass('cur');
-    $('.Tab_Panel_Item').eq($(this).index()).show().siblings().hide();
-  })
-</script>
-<!-- 选择模板 点击+cur -->
-<script>
+
+<!-- 选择模板 左右俩侧列表 点击+cur -->
+<!-- <script>
   $('.template_Right_Item').on('click', function() {
     $(this).addClass('cur').siblings().removeClass('cur');
   })
   $('.template_Left_Item').on('click', function() {
   $(this).addClass('cur').siblings().removeClass('cur');
   })
-</script>
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 4,
-      spaceBetween: 20,
-      // init: false,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
+</script> -->
 
-    });
-  </script>
+
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    // init: false,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+
+  });
+</script>
 </html>
