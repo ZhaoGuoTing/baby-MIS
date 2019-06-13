@@ -962,11 +962,11 @@
         </div>
         <br>
         <div class="el_form_Item">
-          <label class="el_Label el_TextRight" for="UserName" style="width: 100px;">联系人1</label>
-          <input type="text" class="el_Input" placeholder="姓名" id="UserName" style="width: 100px;" />
-          <input type="text" class="el_Input" placeholder="电话" id="UserName" style="width: 130px;" />
+          <label class="el_Label el_TextRight mr10" for="UserName" style="width: 100px;">联系人1</label>
+          <input type="text" class="el_Input mr10" placeholder="姓名" id="UserName" style="width: 100px;" />
+          <input type="text" class="el_Input mr10" placeholder="电话" id="UserName" style="width: 130px;" />
           <div class="BabyInput_Wrap">
-            <input type="text" class="el_Input" placeholder="和宝贝关系" id="UserName" style="width: 120px;" />
+            <input type="text" class="el_Input mr10" placeholder="和宝贝关系" id="UserName" style="width: 120px;" />
             <div class="Baby_upMenu">
               <ul>
                 <li class="el_downMenu_Item">爸爸</li>
@@ -987,11 +987,11 @@
         </div>
         <br>
         <div class="el_form_Item">
-          <label class="el_Label el_TextRight" for="UserName" style="width: 100px;">联系人2</label>
-          <input type="text" class="el_Input" placeholder="姓名" id="UserName" style="width: 100px;" />
-          <input type="text" class="el_Input" placeholder="电话" id="UserName" style="width: 130px;" />
+          <label class="el_Label el_TextRight mr10" for="UserName" style="width: 100px;">联系人2</label>
+          <input type="text" class="el_Input mr10" placeholder="姓名" id="UserName" style="width: 100px;" />
+          <input type="text" class="el_Input mr10" placeholder="电话" id="UserName" style="width: 130px;" />
           <div class="BabyInput_Wrap">
-            <input type="text" class="el_Input" placeholder="和宝贝关系" id="UserName" style="width: 120px;" />
+            <input type="text" class="el_Input mr10" placeholder="和宝贝关系" id="UserName" style="width: 120px;" />
             <div class="Baby_upMenu">
               <ul>
                 <li class="el_downMenu_Item">爸爸</li>
@@ -1018,7 +1018,7 @@
         <br>
         <div class="el_form_Item">
           <label class="el_Label el_TextRight" for="UserName" style="width: 100px;">考勤卡号</label>
-          <input type="text" class="el_Input" placeholder="请输入" id="UserName" />
+          <input type="text" class="el_Input mr10" placeholder="请输入" id="UserName" />
           <button class="el_button" style="width: 70px;">绑定</button>
         </div>
         <div class="ju_End pt50">
@@ -1148,43 +1148,4 @@
 <script src="../js/calendar.js"></script>
 <!-- 公共JS -->
 <script src="../js/common.js"></script>
-<!-- 模态框 添加人员的弹窗 -->
-<script>
-  $('#Modal_AddPersonnel').on('click', function(){
-    $('.Modal_AddWrapMask').show();
-  })
-  $('.Modal_CloseBtn').on('click', function(){
-    $(this).parents('.Modal_AddWrapMask').hide();
-  })
-</script>
-<!-- 模态框 批量调班的弹窗 -->
-<script>
-  $('#Modal_BatchSwitched').on('click', function() {
-    $('.Modal_BatchSwitchedMask').show();
-  })
-  $('.Modal_CloseBtn').on('click', function () {
-    $(this).parents('.Modal_BatchSwitchedMask').hide();
-  })  
-</script>
-
-<!-- input 下拉框 苹果一班 -->
-<script>
-  $('.el_select').on("click", function(e){
-    $(this).siblings('.el_downMenu').stop().slideToggle(100);
-    e.stopPropagation();
-      $(document).on("click", function(){
-      $('.el_downMenu').slideUp(100);
-    });
-  });
-</script>
-<!-- input 下拉框 和宝贝关系 -->
-<script>
-  $('.BabyInput_Wrap input').on('click', function(e) {
-    $(this).siblings('.Baby_upMenu').stop().slideToggle(100);
-     e.stopPropagation();
-        $(document).on("click", function(){
-        $('.Baby_upMenu').slideUp(100);
-    });
-  })
-</script>
 </html>

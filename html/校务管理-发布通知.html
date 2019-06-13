@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>掌心宝贝-幼儿园管理平台</title>
+  <!-- Swiper css -->
+  <link rel="stylesheet" href="https://cdn.bootcss.com/Swiper/4.2.0/css/swiper.min.css">
+
   <link rel="stylesheet" href="../css/common.css">
   <!-- 字体图标 -->
   <link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.css" rel="stylesheet">
@@ -751,22 +754,100 @@
                 <input type="text" class="el_Input" placeholder="请输入" id="UserName" style="width: 560px;" required>
               </div>
               <br>
-              <div class="el_form_Item">
+              <div class="el_form_Item" style="height: auto;">
                 <label class="el_Label el_TextRight" for="UserName" style="width: 100px;"><strong>*</strong>通知标题</label>
-                <input type="text" class="el_Input" placeholder="请输入" id="UserName" style="width: 560px;" required>
+                <img style="width: 560px;height: 310px;" src="../img/editor.png" alt="">
               </div>
               <br>
               <div class="el_form_Item">
                 <label class="el_Label el_TextRight" for="UserName" style="width: 100px;"><strong>*</strong>通知类型</label>
-                <div class="el_Radio">
-                  <input type="radio" name="sex"> 普通通知
-                  <input type="radio" name="sex"> 报名活动
-                  <input type="radio" name="sex"> 投票通知
+                <div class="el_Radio al_Center">
+                  <div class="Tab_Control_Item cur">
+                    <div class="el_Radio_Circle"></div>普通通知
+                  </div>
+                  <div class="Tab_Control_Item">
+                    <div class="el_Radio_Circle"></div>报名活动
+                  </div>
+                  <div class="Tab_Control_Item">
+                    <div class="el_Radio_Circle"></div>投票通知
+                  </div>
                 </div>
+              </div>
+              <br>
+              <br>
+              <div class="el_form_Item">
+                <label class="el_Label el_TextRight" for="UserName" style="width: 100px;">选择模板</label>
+                <div class="el_Radio al_Center">
+                  <div class="Tab_Panel_Item">
+                    <div class="template_Right">
+                      <div class="template_Right_Item cur">园务管理</div>
+                      <div class="template_Right_Item">班级日常</div>
+                      <div class="template_Right_Item">卫生保健</div>
+                      <div class="template_Right_Item">放假安排</div>
+                      <div class="template_Right_Item">催费缴费</div>
+                      <div class="template_Right_Item">温馨关怀</div>
+                    </div>
+                    <div class="template_Left">
+                      <div class="template_Left_Item cur">停车通知</div>
+                      <div class="template_Left_Item">活动通知</div>
+                      <div class="template_Left_Item">开会通知</div>
+                      <div class="template_Left_Item">接送安全通知</div>
+                      <div class="template_Left_Item">天气预报通知</div>
+                      <div class="template_Left_Item">穿园服通知</div>
+                      <div class="template_Left_Item">六一儿童节活动邀请</div>
+                    </div>
+                  </div>
+                  <div class="Tab_Panel_Item">2</div>
+                  <div class="Tab_Panel_Item">3</div>
+                </div>
+              </div>
+              <br>
+              <div class="el_form_Item" style="position: relative;">
+                <label class="el_Label el_TextRight" for="UserName" style="width: 100px;"><strong>*</strong>短信提示</label>
+                <input type="tel" class="el_select" placeholder="不发送短信提示" value="不发送短信提示">
+                <i class="fa fa-angle-down fa-fw selectIcon" style="left: 266px;"></i>
+                <div class="el_downMenu" style="margin-left: 110px; display: none;">
+                  <ul>
+                    <li class="el_downMenu_Item">不发送短信提示</li>
+                    <li class="el_downMenu_Item">10分钟</li>
+                    <li class="el_downMenu_Item">30分钟</li>
+                    <li class="el_downMenu_Item">60分钟</li>
+                  </ul>
+                </div>
+              </div>
+              <br>
+              <div class="el_form_Item" style="height: auto;">
+                <label class="el_Label el_TextRight" for="UserName" style="width: 100px;">选择背景图</label>
+                    <!-- Swiper -->
+                    <div class="swiper-container">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="selectBgList_Item">
+                            <img class="selectBgList_Img" src="" alt="">
+                            <h6>无背景</h6>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                        <div class="swiper-slide">Slide 6</div>
+                      </div>
+                          <!-- Add Pagination -->
+                          <div class="swiper-pagination"></div>
+                    </div>
+                  <!-- <div class="selectBgList_Item">
+                    <img class="selectBgList_Img" src="" alt="">
+                    <h6>无背景</h6>
+                  </div> -->
               </div>
             </div>
             <div class="fr_View">
-              <div class="iphone"></div>
+              <div class="iphone">
+                <div class="iphone_Cont">
+                  23456789
+                </div>
+              </div>
               <!-- qwerty -->
               
               <!--  -->
@@ -779,6 +860,37 @@
   </div>
 </body>
 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
-<script src="../js/common.js"></script>
+  <!-- Swiper JS -->
+<script type="text/javascript " src="https://cdn.bootcss.com/Swiper/4.5.0/js/swiper.js"></script>
 
+<script src="../js/common.js"></script>
+<!-- 通知类型的选项卡 -->
+<script>
+  $('.Tab_Control_Item').on('click', function() {
+    $(this).addClass('cur').siblings().removeClass('cur');
+    $('.Tab_Panel_Item').eq($(this).index()).show().siblings().hide();
+  })
+</script>
+<!-- 选择模板 点击+cur -->
+<script>
+  $('.template_Right_Item').on('click', function() {
+    $(this).addClass('cur').siblings().removeClass('cur');
+  })
+  $('.template_Left_Item').on('click', function() {
+  $(this).addClass('cur').siblings().removeClass('cur');
+  })
+</script>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 4,
+      spaceBetween: 20,
+      // init: false,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+
+    });
+  </script>
 </html>
