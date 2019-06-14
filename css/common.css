@@ -82,6 +82,7 @@ div,ul,li {background: rgba(0, 0, 0, 0.1);}
 
 /* 间距 */
 .p20 {padding: 20px;}
+.p10 {padding: 10px;}
 .mb20 {margin-bottom: 20px;}
 .mv10 {margin: 10px 0;}
 .mr10 {margin-right: 10px;}
@@ -132,6 +133,11 @@ div,ul,li {background: rgba(0, 0, 0, 0.1);}
 .main_Right .nav .userList::before {display: block;content: '';border: 8px solid;border-color: transparent transparent #ebeef5 transparent;position: absolute;top: -16px;right: 30px;}
 
 .el_box {background: #fff;box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);margin-bottom: 24px;border-radius: 4px;}
+.el_box ol {display: flex;justify-content: flex-start;}
+.el_box ol li {font-weight: 600;margin-right: 30px;cursor: pointer;}
+.el_box ol li.cur {color: #01c0c8;border-bottom: 2px solid #01c0c8;}
+.el_box ul li.tabPanel_Item {display: none;}
+
 .el_header {height: 59px;font-size: 16px;padding: 20px 20px 0px 20px;border-bottom: 1px solid #ebeef5;box-sizing: border-box;color: #2c2c2c;}
 .el_table {border-collapse: collapse;width: 100%;text-align: center;}
 .el_table thead {background: #eef1f6;height: 56px;line-height: 56px;}
@@ -174,7 +180,7 @@ div,ul,li {background: rgba(0, 0, 0, 0.1);}
 }
 
 
-.el_Label {font-size: 12px;color: #515151;margin-right: 10px;padding: 10px 0;}
+.el_Label {font-size: 12px;color: #515151;margin-right: 10px;padding: 10px 0;text-align: right;}
 .el_TextRight {float: left;width: 80px;height: 16px;line-height: 16px;text-align: right;}
 .el_InputDate {width: 200px;height: 40px;background: #fff;border-color: #dcdfe6;}
 .el_button {color: #fff;background-color: #01c0c8;border-color: #01c0c8;border-radius: 4px;padding: 0 20px;font-weight: 600;margin-right: 20px;cursor: pointer;height: 36px;}
@@ -461,16 +467,13 @@ li.el_downMenu_Item:hover {
 /* 
   选项卡（切换表单）
 */
-#tab ol {display: flex;justify-content: flex-start;}
-#tab ol li {font-weight: 600;margin-right: 30px;}
-#tab ol li.cur {color: #01c0c8;border-bottom: 2px solid #01c0c8;}
-#tab ul li.tabPanel_Item {display: none;}
 
 
 
 /* 
   模态框 弹窗样式
 */
+.Modal_EditBabyMask,
 .Modal_BatchSwitchedMask,
 .Modal_AddWrapMask {
   position: fixed;
@@ -497,6 +500,7 @@ li.el_downMenu_Item:hover {
 }
 .Modal_CloseBtn:hover {
   color: #01c0c8;
+  cursor: pointer;
 }
 .fl_FormList {
   width: 690px;
@@ -577,14 +581,14 @@ li.el_downMenu_Item:hover {
   width: 80px;
   height: 80px;
   border-radius: 4px;
-  border: 1px dotted #a5a3a3;
+  border: 1px dashed #a5a3a3;
   cursor: pointer;
   position: relative;
   margin-right: 20px;
   overflow: hidden;
 }
 .upload:hover {
-  border: 1px dotted #01c0c8;
+  border: 1px dashed #01c0c8;
 }
 .upload input {
   width: 80px;

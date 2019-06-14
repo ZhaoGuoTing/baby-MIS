@@ -748,13 +748,13 @@
         <span>在园宝贝</span>
       </div>
       <div class="panel_Cont">
-        <div class="el_box" id="tab" style="width: 100%;">
+        <div class="el_box" style="width: 100%;">
           <ol class="el_header">
             <li class="cur">在园宝贝</li>
             <li>离园宝贝</li>
           </ol>
           <ul class="p20">
-            <li class="tabPanel_Item">
+            <li>
               <div>
                 <form class="" action="index.html（url地址）" method="post" name="表单名称">
                   <div class="ju_Start">
@@ -838,7 +838,7 @@
                     <td>09876-098765</td>
                     <td>
                       <div class="ju_Around">
-                        <a href="javascript:void(0);" class="operation">编辑</a>
+                        <a href="javascript:void(0);" class="operation" id="Modal_EditBaby">编辑</a>
                         <a href="javascript:void(0);" class="operation">家长管理</a>
                         <a href="javascript:void(0);" class="operation">绑定考勤卡</a>
                         <a href="javascript:void(0);" class="operation">离园</a>
@@ -907,7 +907,6 @@
                 </div>
               </div>
             </li>
-            <li class="tabPanel_Item">2</li>
           </ul>
         </div>
       </div>
@@ -1140,7 +1139,137 @@
     </div>
   </div>
   <!-- 6月11号 模态框 批量调班的弹窗 End -->
+  <!-- 6月13号 模态框 编辑宝贝信息的弹窗 Start -->
+    <div class="Modal_EditBabyMask" style="display: block;">
+      <div class="Modal_AddWrap" style="width: 860px;">
+        <div class="ju_Between">
+          <div class="el_header" style="border: none;">批量调班</div>
+          <i class="fa fa-close p20 Modal_CloseBtn" aria-hidden="true"></i>
+        </div>
+        <div class="p20 el_box">
+          <ol class="el_header">
+            <li class="cur">基本信息</li>
+            <li>学籍信息</li>
+          </ol>
+          <ul>
+            <li class="tabPanel_Item">
+              <div class="ju_Between">
+                <div style="width: 410px;">
+                  <br>
+                  <div class="el_form_Item">
+                    <label class="el_Label" for="UserName" style="width: 160px;"><strong>*</strong>宝贝姓名</label>
+                    <input type="text" class="el_Input" placeholder="请输入" id="UserName">
+                  </div>
+                  <br>
+                  <div class="el_form_Item">
+                    <label class="el_Label" for="UserName" style="width: 160px;"><strong>*</strong>多音字</label>
+                    <input type="text" class="el_Input" placeholder="请输入" id="UserName">
+                  </div>
+                  <br>
+                  <div class="el_form_Item">
+                    <label class="el_Label" for="UserName" style="width: 160px;"><strong>*</strong>性别</label>
+                    <input type="text" class="el_Input" placeholder="请输入" id="UserName">
+                  </div>
+                </div>
+                <div style="width: 410px;">
+                  <br>
+                  <label class="el_Label el_TextRight" for="UserName" style="width: 160px;">宝贝头像</label>
+                    <div class="upload" style="width: 148px;height: 148px;">
+                      <input type="file" style="width: 148px;height: 148px;">
+                      <i class="fa fa-image fa-2x" aria-hidden="true" style="top: 56px;left: 56px;"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="ju_Between">
+                <div style="width: 410px;">
+                  <br>
+                  <div class="el_form_Item">
+                    <label class="el_Label" for="UserName" style="width: 160px;"><strong>*</strong>宝贝姓名</label>
+                    <input type="text" class="el_Input" placeholder="请输入" id="UserName">
+                  </div>
+                  <br>
+                  <div class="el_form_Item">
+                    <label class="el_Label" for="UserName" style="width: 160px;"><strong>*</strong>多音字</label>
+                    <input type="text" class="el_Input" placeholder="请输入" id="UserName">
+                  </div>
+                  <br>
+                  <div class="el_form_Item">
+                    <label class="el_Label" for="UserName" style="width: 160px;"><strong>*</strong>性别</label>
+                    <input type="text" class="el_Input" placeholder="请输入" id="UserName">
+                  </div>
+                </div>
+                <div style="width: 410px;">
+                  <br>
+                  <div class="el_form_Item">
+                    <label class="el_Label" for="UserName" style="width: 160px;"><strong>*</strong>宝贝姓名</label>
+                    <input type="text" class="el_Input" placeholder="请输入" id="UserName">
+                  </div>
+                  <br>
+                  <div class="el_form_Item">
+                    <label class="el_Label" for="UserName" style="width: 160px;"><strong>*</strong>多音字</label>
+                    <input type="text" class="el_Input" placeholder="请输入" id="UserName">
+                  </div>
+                  <br>
+                  <div class="el_form_Item">
+                    <label class="el_Label" for="UserName" style="width: 160px;"><strong>*</strong>性别</label>
+                    <input type="text" class="el_Input" placeholder="请输入" id="UserName">
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="el_form_Item">
+                  <label class="el_Label" for="UserName" style="width: 160px;"><strong>*</strong>调班历史</label>
+                  <input type="text" class="el_Input" placeholder="请输入" id="UserName">
+                </div>
+              </div>
+              <div>
+                <div class="el_form_Item">
+                  <label class="el_Label" for="UserName" style="width: 160px;"><strong>*</strong>家庭住址</label>
+                  <div class="el_form_Item" style="position: relative;">
+                    <input type="tel" class="el_select" placeholder="请选择" value="苹果一班">
+                    <i class="fa fa-angle-down fa-fw selectIcon"></i>
+                    <div class="el_downMenu">
+                      <ul>
+                        <li class="el_downMenu_Item">苹果一班</li>
+                        <li class="el_downMenu_Item">菠萝一班</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="el_form_Item" style="position: relative;">
+                    <input type="tel" class="el_select" placeholder="请选择" value="苹果一班">
+                    <i class="fa fa-angle-down fa-fw selectIcon"></i>
+                    <div class="el_downMenu">
+                      <ul>
+                        <li class="el_downMenu_Item">苹果一班</li>
+                        <li class="el_downMenu_Item">菠萝一班</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="el_form_Item" style="position: relative;">
+                    <input type="tel" class="el_select" placeholder="请选择" value="苹果一班">
+                    <i class="fa fa-angle-down fa-fw selectIcon"></i>
+                    <div class="el_downMenu">
+                      <ul>
+                        <li class="el_downMenu_Item">苹果一班</li>
+                        <li class="el_downMenu_Item">菠萝一班</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                  <input type="text" class="el_Input" placeholder="请输入" id="UserName">
 
+              </div>
+              <div class="ju_Center pt50">
+                <button class="el_button_white" style="width: 70px;margin: 0 10px;">取消</button>
+                <button class="el_button" style="width: 70px;margin: 0 10px;">提交</button>
+              </div>
+            </li>
+            <li class="tabPanel_Item">2</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  <!-- 6月13号 模态框 编辑宝贝信息的弹窗 End -->
 </body>
 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 <!-- 下载的 jquery select日历选择器 -->

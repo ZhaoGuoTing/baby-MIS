@@ -30,12 +30,12 @@ $('.user').on("click", function (e) {
 });
 
 //  <!-- 选项卡  内容区域的 -- >
-$('#tab ul li.tabPanel_Item').eq(0).show(); // 第一个面板 显示
-$('#tab ol li').on('click', function () {
+$('.el_box ul li.tabPanel_Item').eq(0).show(); // 第一个面板 显示
+$('.el_box ol li').on('click', function () {
   // 点击时、添加cur样式
   $(this).addClass('cur').siblings().removeClass('cur');
   // 点击时、显示当前对应面板
-  $('#tab ul li.tabPanel_Item').eq($(this).index()).show().siblings().hide();
+  $('.el_box ul li.tabPanel_Item').eq($(this).index()).show().siblings().hide();
 })
 
 // <!-- 宝贝管理——在园宝贝 模态框 添加人员的弹窗 -->
