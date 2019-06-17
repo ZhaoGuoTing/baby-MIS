@@ -1140,10 +1140,10 @@
   </div>
   <!-- 6月11号 模态框 批量调班的弹窗 End -->
   <!-- 6月13号 模态框 编辑宝贝信息的弹窗 Start -->
-    <div class="Modal_EditBabyMask" style="display: block;">
+    <div class="Modal_EditBabyMask">
       <div class="Modal_AddWrap" style="width: 860px;">
         <div class="ju_Between">
-          <div class="el_header" style="border: none;">批量调班</div>
+          <div class="el_header" style="border: none;">编辑宝贝信息</div>
           <i class="fa fa-close p20 Modal_CloseBtn" aria-hidden="true"></i>
         </div>
         <div class="p20 el_box">
@@ -1245,8 +1245,15 @@
                     <i class="fa fa-angle-down fa-fw selectIcon" style="left: 154px;"></i>
                     <div class="el_downMenu" style="margin-left: 0;">
                       <ul>
-                        <li class="el_downMenu_Item">苹果一班</li>
-                        <li class="el_downMenu_Item">菠萝一班</li>
+                        <li class="el_downMenu_Item">北京</li>
+                        <li class="el_downMenu_Item">天津</li>
+                        <li class="el_downMenu_Item">河北省</li>
+                        <li class="el_downMenu_Item">山西省</li>
+                        <li class="el_downMenu_Item">内蒙古自治区</li>
+                        <li class="el_downMenu_Item">辽宁省</li>
+                        <li class="el_downMenu_Item">吉林省</li>
+                        <li class="el_downMenu_Item">黑龙江省</li>
+                        <li class="el_downMenu_Item">上海</li>
                       </ul>
                     </div>
                   </div>
@@ -1255,8 +1262,7 @@
                     <i class="fa fa-angle-down fa-fw selectIcon" style="left: 154px;"></i>
                     <div class="el_downMenu" style="margin-left: 0;">
                       <ul>
-                        <li class="el_downMenu_Item">苹果一班</li>
-                        <li class="el_downMenu_Item">菠萝一班</li>
+                        <li class="el_downMenu_Item">无数据</li>
                       </ul>
                     </div>
                   </div>
@@ -1265,8 +1271,7 @@
                     <i class="fa fa-angle-down fa-fw selectIcon" style="left: 154px;"></i>
                     <div class="el_downMenu" style="margin-left: 0;">
                       <ul>
-                        <li class="el_downMenu_Item">苹果一班</li>
-                        <li class="el_downMenu_Item">菠萝一班</li>
+                        <li class="el_downMenu_Item">无数据</li>
                       </ul>
                     </div>
                   </div>
@@ -1282,7 +1287,177 @@
                 <button class="el_button" style="width: 70px;margin: 0 10px;">提交</button>
               </div>
             </li>
-            <li class="tabPanel_Item">2</li>
+            <li class="tabPanel_Item">
+              <br>
+              <div class="ju_Between">
+                <div style="width: 410px;">
+                  <div class="el_form_Item" style="position: relative;">
+                    <label class="el_Label" for="UserName" style="width: 160px;">身份证件类型</label>
+                    <input type="tel" class="el_select" placeholder="请选择" value="">
+                    <i class="fa fa-angle-down fa-fw selectIcon" style="left: 324px;"></i>
+                    <div class="el_downMenu" style="margin-left: 170px;">
+                      <ul>
+                        <li class="el_downMenu_Item">居民身份证</li>
+                        <li class="el_downMenu_Item">香港特区护照/身份证明</li>
+                        <li class="el_downMenu_Item">澳门特区护照/身份证明</li>
+                        <li class="el_downMenu_Item">台湾居民来往大陆通行证</li>
+                        <li class="el_downMenu_Item">境外永久居住证</li>
+                        <li class="el_downMenu_Item">护照</li>
+                        <li class="el_downMenu_Item">其他</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="el_form_Item" style="position: relative;">
+                    <label class="el_Label" for="UserName" style="width: 160px;">血型</label>
+                    <input type="tel" class="el_select" placeholder="请选择" value="">
+                    <i class="fa fa-angle-down fa-fw selectIcon" style="left: 324px;"></i>
+                    <div class="el_downMenu" style="margin-left: 170px;">
+                      <ul>
+                        <li class="el_downMenu_Item">未知血型</li>
+                        <li class="el_downMenu_Item">A血型</li>
+                        <li class="el_downMenu_Item">B血型</li>
+                        <li class="el_downMenu_Item">AB血型</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="el_form_Item" style="position: relative;">
+                    <label class="el_Label" for="UserName" style="width: 160px;">民族</label>
+                    <input type="tel" class="el_select" placeholder="请选择" value="">
+                    <i class="fa fa-angle-down fa-fw selectIcon" style="left: 324px;"></i>
+                    <div class="el_downMenu" style="margin-left: 170px;">
+                      <ul>
+                        <li class="el_downMenu_Item">汉族</li>
+                        <li class="el_downMenu_Item">蒙古族</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="el_form_Item">
+                    <label class="el_Label" for="UserName" style="width: 160px;">出生所在地</label>
+                    <input type="text" class="el_Input" placeholder="请输入" id="UserName">
+                  </div>
+                  <br>
+                  <div class="el_form_Item">
+                    <label class="el_Label" for="UserName" style="width: 160px;">户口所在地</label>
+                    <input type="text" class="el_Input" placeholder="请输入" id="UserName">
+                  </div>
+                  <br>
+                  <div class="el_form_Item" style="position: relative;">
+                    <label class="el_Label" for="UserName" style="width: 160px;">就读方式</label>
+                    <input type="tel" class="el_select" placeholder="请选择" value="">
+                    <i class="fa fa-angle-down fa-fw selectIcon" style="left: 324px;"></i>
+                    <div class="el_downMenu" style="margin-left: 170px;">
+                      <ul>
+                        <li class="el_downMenu_Item">走读</li>
+                        <li class="el_downMenu_Item">住校</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="el_form_Item">
+                    <label class="el_Label el_TextRight" for="UserName"
+                      style="width: 160px;">是否残疾幼儿</label>
+                    <div class="el_Radio">
+                      <input type="radio" name="sex"> 是
+                      <input type="radio" name="sex"> 否
+                    </div>
+                  </div>
+                  <br>
+                  <div class="el_form_Item">
+                    <label class="el_Label" for="UserName" style="width: 160px;">监护人姓名</label>
+                    <input type="text" class="el_Input" placeholder="请输入" id="UserName">
+                  </div>
+                  <br>
+                  <div class="el_form_Item">
+                    <label class="el_Label" for="UserName" style="width: 160px;">监护人身份证件号码</label>
+                    <input type="text" class="el_Input" placeholder="请输入" id="UserName">
+                  </div>
+                </div>
+                <div style="width: 410px;">
+                  <div class="el_form_Item">
+                    <label class="el_Label" for="UserName" style="width: 160px;">身份证件号码</label>
+                    <input type="text" class="el_Input" placeholder="请输入" id="UserName">
+                  </div>
+                  <br>
+                  <div class="el_form_Item" style="position: relative;">
+                    <label class="el_Label" for="UserName" style="width: 160px;">国籍/地区</label>
+                    <input type="tel" class="el_select" placeholder="请选择" value="">
+                    <i class="fa fa-angle-down fa-fw selectIcon" style="left: 324px;"></i>
+                    <div class="el_downMenu" style="margin-left: 170px;">
+                      <ul>
+                        <li class="el_downMenu_Item">中国</li>
+                        <li class="el_downMenu_Item">阿富汗</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="el_form_Item" style="position: relative;">
+                    <label class="el_Label" for="UserName" style="width: 160px;">港澳台侨外</label>
+                    <input type="tel" class="el_select" placeholder="请选择" value="">
+                    <i class="fa fa-angle-down fa-fw selectIcon" style="left: 324px;"></i>
+                    <div class="el_downMenu" style="margin-left: 170px;">
+                      <ul>
+                        <li class="el_downMenu_Item">非港澳台侨</li>
+                        <li class="el_downMenu_Item">香港同胞</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="el_form_Item">
+                    <label class="el_Label" for="UserName" style="width: 160px;">籍贯</label>
+                    <input type="text" class="el_Input" placeholder="请输入" id="UserName">
+                  </div>
+                  <br>
+                  <div class="el_form_Item">
+                    <label class="el_Label" for="UserName" style="width: 160px;">现住址</label>
+                    <input type="text" class="el_Input" placeholder="请输入" id="UserName">
+                  </div>
+                  <br>
+                  <div class="el_form_Item" style="position: relative;">
+                    <label class="el_Label" for="UserName" style="width: 160px;">健康状况</label>
+                    <input type="tel" class="el_select" placeholder="请选择" value="">
+                    <i class="fa fa-angle-down fa-fw selectIcon" style="left: 324px;"></i>
+                    <div class="el_downMenu" style="margin-left: 170px;">
+                      <ul>
+                        <li class="el_downMenu_Item">健康或良好</li>
+                        <li class="el_downMenu_Item">一般或较弱</li>
+                        <li class="el_downMenu_Item">有慢性病</li>
+                        <li class="el_downMenu_Item">残疾</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="el_form_Item">
+                    <label class="el_Label el_TextRight" for="UserName" style="width: 160px;">是否孤儿</label>
+                    <div class="el_Radio">
+                      <input type="radio" name="sex"> 是
+                      <input type="radio" name="sex"> 否
+                    </div>
+                  </div>
+                  <br>
+                  <div class="el_form_Item" style="position: relative;">
+                    <label class="el_Label" for="UserName" style="width: 160px;">监护人身份证类型</label>
+                    <input type="tel" class="el_select" placeholder="请选择" value="">
+                    <i class="fa fa-angle-down fa-fw selectIcon" style="left: 324px;"></i>
+                    <div class="el_downMenu" style="margin-left: 170px;">
+                      <ul>
+                        <li class="el_downMenu_Item">居民身份证</li>
+                        <li class="el_downMenu_Item">军官证</li>
+                        <li class="el_downMenu_Item">士兵证</li>
+                        <li class="el_downMenu_Item">文职干部证</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ju_Center pt50">
+                <button class="el_button_white" style="width: 70px;margin: 0 10px;">取消</button>
+                <button class="el_button" style="width: 70px;margin: 0 10px;">提交</button>
+              </div>
+              <br>
+            </li>
           </ul>
         </div>
       </div>
@@ -1294,4 +1469,5 @@
 <script src="../js/calendar.js"></script>
 <!-- 公共JS -->
 <script src="../js/common.js"></script>
+
 </html>

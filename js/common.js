@@ -38,21 +38,22 @@ $('.el_box ol li').on('click', function () {
   $('.el_box ul li.tabPanel_Item').eq($(this).index()).show().siblings().hide();
 })
 
-// <!-- 宝贝管理——在园宝贝 模态框 添加人员的弹窗 -->
-  $('#Modal_AddPersonnel').on('click', function () {
-    $('.Modal_AddWrapMask').show();
-  })
-  $('.Modal_CloseBtn').on('click', function () {
-    $(this).parents('.Modal_AddWrapMask').hide();
-  })
 
-// <!-- 宝贝管理——在园宝贝 模态框 批量调班的弹窗 -->
-  $('#Modal_BatchSwitched').on('click', function () {
-    $('.Modal_BatchSwitchedMask').show();
-  })
-  $('.Modal_CloseBtn').on('click', function () {
-    $(this).parents('.Modal_BatchSwitchedMask').hide();
-  })
+// <!-- 新增宝贝、批量调班、操作编辑 Modal弹窗 Start -->
+el_Modal($('#Modal_AddPersonnel'), $('.Modal_AddWrapMask'), $('.Modal_CloseBtn'))
+el_Modal($('#Modal_BatchSwitched'), $('.Modal_BatchSwitchedMask'), $('.Modal_CloseBtn'))
+el_Modal($('#Modal_EditBaby'), $('.Modal_EditBabyMask'), $('.Modal_CloseBtn'))
+
+  function el_Modal(Modal, Mask, CloseBtn) {
+    Modal.on('click', function () {
+      Mask.show();
+    })
+    CloseBtn.on('click', function () {
+      Mask.hide();
+    })
+  }
+// <!-- 新增宝贝、批量调班、操作编辑 Modal弹窗 End -->
+
 
 // <!-- 宝贝管理——在园宝贝 input 下拉框 苹果一班 -->
   $('.el_select').on("click", function (e) {
